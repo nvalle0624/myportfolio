@@ -1,38 +1,73 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  display: flex;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.intro {
+  display: flex;
+  justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a:hover {
+  background-color: rgba(117, 255, 225, 0.61);
+}
+
+#cardtop:hover {
+  background-color: rgba(117, 255, 225, 0.61);
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+/* input {
+  display: none;
+} */
+
+.tech-selection {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.tech-button {
+  border-radius: 3px;
+  margin: 10px;
+}
+
+.selected {
+  background-color: lightblue;
+}
+
+.selected-work {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit, 100px);
+  grid-template-rows: repeat(2, 100px);
+}
+
+.form-container {
+  margin: 40px;
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+}
+
+.aboutme {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 70%;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tech-span {
+  border: 1px solid black;
+  border-radius: 7px;
+  padding: 5px;
 }
