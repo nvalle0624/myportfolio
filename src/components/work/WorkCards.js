@@ -4,9 +4,9 @@ import FunReaderCard from "./funreaderCard";
 // import funreaderIMG from "./static/funreader.jpg";
 
 export const workCards = [
-  <BananaDogCard tags={["Python", "Django", "Bootstrap", "CSS"]} name="bananadog" />,
+  <BananaDogCard tags={["Python", "Django", "Bootstrap", "CSS", "HTML"]} name="bananadog" />,
   <FunReaderCard
-    tags={["JavaScript", "React", "Redux", "Node.js", "AJAX", "Express.js", "MongoDB"]}
+    tags={["JavaScript", "React", "Redux", "Node.js", "AJAX", "Express.js", "MongoDB", "HTML"]}
     name="funreader"
   />,
 ];

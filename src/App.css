@@ -36,12 +36,43 @@ a:hover {
 }
 
 .tech-button {
-  border-radius: 3px;
-  margin: 10px;
+  border: none;
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+  padding: 10px 27px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.tech-button:hover {
+  background-color: rgba(117, 255, 225, 0.61);
+  border-radius: 5px;
+}
+
+.poster-selection {
+  display: flex;
+  border: 1px solid red;
+  height: 400px;
+}
+.poster:hover {
+  background-color: rgba(117, 255, 225, 0.61);
+}
+
+.poster {
+  border: 1px solid purple;
+  margin: 5px;
+  height: 70px;
 }
 
 .selected {
-  background-color: lightblue;
+  background-color: lightpink;
+}
+
+.selected:hover {
+  background-color: rgb(78, 125, 212);
 }
 
 .selected-work {
