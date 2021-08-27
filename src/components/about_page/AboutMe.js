@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { allAudio } from "../work/Work";
 
 function AboutMe(props) {
+  useEffect(() => {
+    allAudio.forEach((sound) => sound.audio.pause());
+  });
+
   return (
     <React.Fragment>
       <h1>About Me</h1>
