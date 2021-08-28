@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import { workCards } from "./WorkCards";
-import drums from "./static/audio/Bluebird.wav";
-import synth1 from "./static/audio/70s Choral Riff Layers.wav";
-import synth2 from "./static/audio/80s Pop Synthesizer 01.wav";
-import guitar from "./static/audio/Longing Guitar.wav";
+import drums from "./static/audio/Bluebird.mp3";
+import synth1 from "./static/audio/70s Choral Riff Layers.mp3";
+import synth2 from "./static/audio/80s Pop Synthesizer 01.mp3";
+import guitar from "./static/audio/Longing Guitar.mp3";
+import guitar2 from "./static/audio/Echo Loop Guitar.mp3";
+import piano from "./static/audio/Cali Vibes Piano.mp3";
+import sax from "./static/audio/Night Walk Sax.mp3";
+import guitar3 from "./static/audio/Rolling Disco Guitar.mp3";
+import maracas from "./static/audio/Big Maracas 05.mp3";
 
 const audio1 = new Audio(drums);
 const audio2 = new Audio(synth1);
@@ -12,6 +17,11 @@ const audios = [
   { audio: synth1, name: "JavaScript" },
   { audio: synth2, name: "Django" },
   { audio: guitar, name: "React" },
+  { audio: guitar2, name: "Redux" },
+  { audio: piano, name: "Node.js" },
+  { audio: sax, name: "Express.js" },
+  { audio: guitar3, name: "SQL" },
+  { audio: maracas, name: "NoSql" },
 ];
 export const allAudio = [
   { audio: audio1, name: "Python" },
