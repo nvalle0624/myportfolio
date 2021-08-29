@@ -36,15 +36,26 @@ export const allAudio = [
 function Work(props) {
   const [selectedTech, setSelectedTech] = useState([]);
   const [selectedWork, setSelectedWork] = useState(workCards);
-
+  const [selectMute, setSelectMute] = useState("unmute");
   let newSelectedWork = [];
   let audioHTML = "";
   let selectedAudio = [];
 
+  const handleMute = (event) => {
+    if (selectMute === "unmute") {
+      setSelectMute("mute");
+    } else {
+      setSelectMute("unmute");
+    }
+  };
+
   for (let a of selectedTech) {
     audioHTML = document.getElementById("audio-" + a);
-    console.log(audioHTML);
-    audioHTML.muted = false;
+    if (selectMute === "mute") {
+      audioHTML.muted = false;
+    } else {
+      audioHTML.muted = true;
+    }
     selectedAudio.push(a);
   }
 
@@ -55,7 +66,6 @@ function Work(props) {
 
     for (let a of selectedTech) {
       audioHTML = document.getElementById("audio-" + a);
-      console.log(audioHTML);
       audioHTML.muted = true;
       selectedAudio.push(a);
     }
@@ -122,7 +132,6 @@ function Work(props) {
       }
     });
   }
-  console.log(selectedTech);
 
   let techButtons = [
     "Python",
@@ -146,6 +155,9 @@ function Work(props) {
   return (
     <React.Fragment>
       <h1>Projects</h1>
+      <button className="muteButton" onClick={handleMute}>
+        {selectMute}
+      </button>
 
       <div className="tech-selection">
         {techButtons.map((tech) => (
@@ -173,7 +185,16 @@ function Work(props) {
       </div>
 
       {audios.map((item) => (
-        <audio autoplay="true" loop src={item.audio} id={"audio-" + item.name} muted></audio>
+        <audio
+          className="audio-element"
+          autoPlay={true}
+          preload="auto"
+          loop
+          src={item.audio}
+          id={"audio-" + item.name}
+          muted
+          key={item.name}
+        ></audio>
       ))}
     </React.Fragment>
   );

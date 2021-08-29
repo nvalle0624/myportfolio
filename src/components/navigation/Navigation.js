@@ -106,7 +106,11 @@ function Navigation(props) {
                   >
                     {menuItems.map((menuItem) => {
                       const { title, pageURL } = menuItem;
-                      return <MenuItem onClick={() => handleMenuClick(pageURL)}>{title}</MenuItem>;
+                      return (
+                        <MenuItem onClick={() => handleMenuClick(pageURL)} key={title}>
+                          {title}
+                        </MenuItem>
+                      );
                     })}
                   </Menu>
                 </>
@@ -121,6 +125,7 @@ function Navigation(props) {
                           disableRipple
                           style={{ margin: "10px" }}
                           onClick={() => handleMenuClick(pageURL)}
+                          key={title}
                         >
                           {title}
                         </Button>
