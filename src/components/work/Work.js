@@ -9,6 +9,9 @@ import piano from "./static/audio/Cali Vibes Piano.mp3";
 import sax from "./static/audio/Night Walk Sax.mp3";
 import guitar3 from "./static/audio/Rolling Disco Guitar.mp3";
 import maracas from "./static/audio/Big Maracas 05.mp3";
+import tambourine from "./static/audio/Tambourine 01.mp3";
+import fireplace from "./static/audio/Fireplace All.mp3";
+import brookyln from "./static/audio/Brooklyn Style Vibes 02.mp3";
 
 const audio1 = new Audio(drums);
 const audio2 = new Audio(synth1);
@@ -22,6 +25,9 @@ const audios = [
   { audio: sax, name: "Express.js" },
   { audio: guitar3, name: "SQL" },
   { audio: maracas, name: "NoSql" },
+  { audio: tambourine, name: "Postgresql" },
+  { audio: fireplace, name: "MongoDB" },
+  { audio: brookyln, name: "Bootstrap" },
 ];
 export const allAudio = [
   { audio: audio1, name: "Python" },
@@ -167,7 +173,7 @@ function Work(props) {
       </div>
 
       {audios.map((item) => (
-        <audio autoplay="true" src={item.audio} id={"audio-" + item.name} muted></audio>
+        <audio autoplay="true" loop src={item.audio} id={"audio-" + item.name} muted></audio>
       ))}
     </React.Fragment>
   );
