@@ -9,7 +9,6 @@ import CardActions from "@material-ui/core/CardActions";
 import Collapse from "@material-ui/core/Collapse";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-import { red } from "@material-ui/core/colors";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import funreaderIMG from "./static/funreader.jpg";
 
@@ -61,10 +60,9 @@ function FunReaderCard(props) {
           ))}
         </div>
         <Typography variant="body2" color="textSecondary" component="p" style={{ marginTop: "20px" }}>
-          An application for a dog training business where trainers and clients can book sessions, communicate, and
-          access a persistent log of dogs’ info and daily reports. The app also contains functionality beyond scheduling
-          and communicating, allowing trainers to automatically log times and notes for trainings/activities per dog,
-          per session.
+          A spelling game web application. Users select topics to save on their profiles, and those topics are used to
+          fetch dictionary API data to select words for the game. Game presents definition, part of speech and soundclip
+          for pronunciation.
         </Typography>
       </CardContent>
       <CardActions disableSpacing>

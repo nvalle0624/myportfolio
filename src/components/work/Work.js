@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { workCards } from "./WorkCards";
 import drums from "./static/audio/Bluebird.mp3";
 import synth1 from "./static/audio/70s Choral Riff Layers.mp3";
@@ -12,9 +12,11 @@ import maracas from "./static/audio/Big Maracas 05.mp3";
 import tambourine from "./static/audio/Tambourine 01.mp3";
 import fireplace from "./static/audio/Fireplace All.mp3";
 import brookyln from "./static/audio/Brooklyn Style Vibes 02.mp3";
+import bass1 from "./static/audio/Edgy Rock Bass 07.mp3";
+import bass2 from "./static/audio/Drop the Funk Bass 01.mp3";
+import synth3 from "./static/audio/Aquamarine Synth.mp3";
+import synth4 from "./static/audio/80s Classic Lead Synth.mp3";
 
-const audio1 = new Audio(drums);
-const audio2 = new Audio(synth1);
 const audios = [
   { audio: drums, name: "Python" },
   { audio: synth1, name: "JavaScript" },
@@ -28,18 +30,18 @@ const audios = [
   { audio: tambourine, name: "Postgresql" },
   { audio: fireplace, name: "MongoDB" },
   { audio: brookyln, name: "Bootstrap" },
+  { audio: bass1, name: "CSS" },
+  { audio: bass2, name: "HTML" },
+  { audio: synth3, name: "API's" },
+  { audio: synth4, name: "RESTframework" },
 ];
-export const allAudio = [
-  { audio: audio1, name: "Python" },
-  { audio: audio2, name: "JavaScript" },
-];
+
 function Work(props) {
   const [selectedTech, setSelectedTech] = useState([]);
   const [selectedWork, setSelectedWork] = useState(workCards);
   const [selectMute, setSelectMute] = useState("unmute");
   let newSelectedWork = [];
   let audioHTML = "";
-  let selectedAudio = [];
 
   const handleMute = (event) => {
     if (selectMute === "unmute") {
@@ -48,6 +50,20 @@ function Work(props) {
       setSelectMute("unmute");
     }
   };
+  const audioTags = Array.from(document.getElementsByClassName("audio-element"));
+
+  useEffect(() => {
+    const handlePlay = () => {
+      for (let i of audioTags) {
+        i.currentTime = 0;
+        i.play();
+      }
+    };
+    const interval = setInterval(() => {
+      handlePlay();
+    }, 18015);
+    return () => clearInterval(interval);
+  }, [selectedTech, audioTags]);
 
   for (let a of selectedTech) {
     audioHTML = document.getElementById("audio-" + a);
@@ -56,7 +72,6 @@ function Work(props) {
     } else {
       audioHTML.muted = true;
     }
-    selectedAudio.push(a);
   }
 
   const handleSelectTech = (event) => {
@@ -67,7 +82,6 @@ function Work(props) {
     for (let a of selectedTech) {
       audioHTML = document.getElementById("audio-" + a);
       audioHTML.muted = true;
-      selectedAudio.push(a);
     }
 
     if (!selectedTech.includes(tech)) {
@@ -158,6 +172,12 @@ function Work(props) {
       <button className="muteButton" onClick={handleMute}>
         {selectMute}
       </button>
+      {/* <button className="pauseButton" onClick={handlePause}>
+        pause
+      </button>
+      <button className="playButton" onClick={handlePlay}>
+        play
+      </button> */}
 
       <div className="tech-selection">
         {techButtons.map((tech) => (
@@ -189,7 +209,7 @@ function Work(props) {
           className="audio-element"
           autoPlay={true}
           preload="auto"
-          loop
+          // loop
           src={item.audio}
           id={"audio-" + item.name}
           muted

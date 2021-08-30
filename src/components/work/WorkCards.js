@@ -6,7 +6,7 @@ import FunReaderCard from "./funreaderCard";
 export const workCards = [
   <BananaDogCard tags={["Python", "Django", "Bootstrap", "CSS", "HTML"]} name="bananadog" />,
   <FunReaderCard
-    tags={["JavaScript", "React", "Redux", "Node.js", "AJAX", "Express.js", "MongoDB", "HTML"]}
+    tags={["JavaScript", "React", "Redux", "Node.js", "Express.js", "MongoDB", "HTML", "API's"]}
     name="funreader"
   />,
 ];

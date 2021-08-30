@@ -1,13 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import resumePDF from "./nicholas_valle_resume.pdf";
-import { allAudio } from "../work/Work";
 
 function Resume() {
-  useEffect(() => {
-    allAudio.forEach((sound) => sound.audio.pause());
-  });
   return (
     <React.Fragment>
       <h1>Resumé</h1>

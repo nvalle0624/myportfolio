@@ -115,24 +115,24 @@ function Navigation(props) {
                   </Menu>
                 </>
               ) : (
-                <IconButton disableRipple edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                  <div className={classes.headerOptions}>
-                    {menuItems.map((menuItem) => {
-                      const { title, pageURL } = menuItem;
-                      return (
-                        <Button
-                          variant="contained"
-                          disableRipple
-                          style={{ margin: "10px" }}
-                          onClick={() => handleMenuClick(pageURL)}
-                          key={title}
-                        >
-                          {title}
-                        </Button>
-                      );
-                    })}
-                  </div>
-                </IconButton>
+                // <IconButton disableRipple edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                <div className={classes.headerOptions}>
+                  {menuItems.map((menuItem) => {
+                    const { title, pageURL } = menuItem;
+                    return (
+                      <Button
+                        variant="contained"
+                        disableRipple
+                        style={{ margin: "10px" }}
+                        onClick={() => handleMenuClick(pageURL)}
+                        key={title}
+                      >
+                        {title}
+                      </Button>
+                    );
+                  })}
+                </div>
+                // </IconButton>
               )}
             </div>
           </Toolbar>

@@ -1,11 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Button, InputLabel, TextField } from "@material-ui/core";
-import { allAudio } from "../work/Work";
 
 const ContactForm = () => {
-  useEffect(() => {
-    allAudio.forEach((sound) => sound.audio.pause());
-  });
   const [status, setStatus] = useState("Submit");
   const handleSubmit = async (e) => {
     e.preventDefault();
