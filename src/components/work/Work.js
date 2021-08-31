@@ -51,7 +51,12 @@ function Work(props) {
     }
   };
   const audioTags = Array.from(document.getElementsByClassName("audio-element"));
-
+  const handleReset = (event) => {
+    for (let i of audioTags) {
+      i.currentTime = 0;
+      i.play();
+    }
+  };
   useEffect(() => {
     const handlePlay = () => {
       for (let i of audioTags) {
@@ -63,7 +68,7 @@ function Work(props) {
       handlePlay();
     }, 18015);
     return () => clearInterval(interval);
-  }, [selectedTech, audioTags]);
+  }, [audioTags]);
 
   for (let a of selectedTech) {
     audioHTML = document.getElementById("audio-" + a);
@@ -74,10 +79,19 @@ function Work(props) {
     }
   }
 
+  function handleDeselect() {
+    window.location.reload();
+  }
+
   const handleSelectTech = (event) => {
     let tech = event.currentTarget.innerHTML;
     setSelectedTech(selectedTech);
     setSelectedWork(selectedWork);
+
+    const isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+    if (isChrome) {
+      handleReset();
+    }
 
     for (let a of selectedTech) {
       audioHTML = document.getElementById("audio-" + a);
@@ -172,12 +186,10 @@ function Work(props) {
       <button className="muteButton" onClick={handleMute}>
         {selectMute}
       </button>
-      {/* <button className="pauseButton" onClick={handlePause}>
-        pause
+
+      <button className="deselectButton" onClick={handleDeselect}>
+        reset selection
       </button>
-      <button className="playButton" onClick={handlePlay}>
-        play
-      </button> */}
 
       <div className="tech-selection">
         {techButtons.map((tech) => (
@@ -207,7 +219,7 @@ function Work(props) {
       {audios.map((item) => (
         <audio
           className="audio-element"
-          autoPlay={true}
+          autoPlay
           preload="auto"
           // loop
           src={item.audio}
