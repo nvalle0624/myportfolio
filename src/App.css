@@ -53,22 +53,45 @@ a:hover {
 }
 
 .poster-selection {
-  display: flex;
-  border: 1px solid red;
-  height: 400px;
+  height: 500px;
+
+  position: relative;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  overflow: scroll;
+
+  justify-content: start;
 }
+
+@media screen and (min-width: 1290px) {
+  div.poster-selection {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.poster-container {
+  background-image: url("./components/work/static/portfoliobackground2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1290px 550px;
+  display: flex;
+  height: 500px;
+  width: 1290px;
+}
+
 .poster:hover {
-  background-color: rgba(117, 255, 225, 0.61);
+  background-color: rgba(117, 255, 225, 0.61) !important;
 }
 
 .poster {
-  border: 1px solid purple;
-  margin: 5px;
-  height: 70px;
+  border: 3px solid purple;
+  height: 50px;
 }
 
 .selected {
-  background-color: lightpink;
+  background-color: lightpink !important;
+  fill: rgba(69, 123, 240, 0.295) !important;
 }
 
 .selected:hover {
@@ -76,10 +99,15 @@ a:hover {
 }
 
 .selected-work {
-  display: grid;
+  /* display: grid;
   grid-gap: 5px;
   grid-template-columns: repeat(auto-fit, 100px);
-  grid-template-rows: repeat(2, 100px);
+  grid-template-rows: repeat(2, 100px); */
+  display: flex;
+  height: 400px;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .form-container {
@@ -102,3 +130,148 @@ a:hover {
   border-radius: 7px;
   padding: 5px;
 }
+
+.control-button {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+  padding: 10px 27px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.control-button:hover {
+  background-color: rgba(117, 255, 225, 0.61);
+  border-radius: 5px;
+}
+
+.controls-container {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  position: relative;
+  bottom: 75px;
+}
+
+.poster#Python {
+  background-color: red;
+  position: relative;
+  top: 7%;
+  right: 7%;
+}
+.poster#Django {
+  background-color: green;
+  position: relative;
+  right: 13%;
+  top: 30%;
+}
+.poster#JavaScript {
+  background-color: blue;
+  position: relative;
+  right: 10%;
+  top: 22%;
+}
+.poster#React {
+  background-color: yellow;
+  position: relative;
+  left: 10%;
+  top: 13%;
+}
+.poster#Redux {
+  background-color: purple;
+  position: relative;
+  right: 15%;
+  top: 45%;
+}
+.poster#Nodejs {
+  background-color: orange;
+  position: relative;
+  right: 15%;
+  top: 5%;
+}
+.poster#Expressjs {
+  background-color: cyan;
+  position: relative;
+  left: 20%;
+  top: 8%;
+}
+.poster#SQL {
+  background-color: magenta;
+  position: relative;
+  left: 27%;
+  top: 13%;
+}
+.poster#NoSql {
+  background-color: aquamarine;
+  position: relative;
+  left: 38%;
+  top: 20%;
+}
+.poster#Postgresql {
+  background-color: forestgreen;
+  position: relative;
+  left: 29%;
+  top: 37%;
+}
+
+.poster#MongoDB {
+  background-color: gold;
+  position: relative;
+  right: 29%;
+  top: 43%;
+}
+.poster#Bootstrap {
+  background-color: lightsalmon;
+  position: relative;
+  right: 43%;
+  top: 26%;
+}
+.poster#CSS {
+  background-color: palevioletred;
+  position: relative;
+  right: 22%;
+  top: 39%;
+}
+.poster#HTML {
+  background-color: coral;
+  position: relative;
+  left: 0%;
+  top: 45%;
+}
+.poster#APIs {
+  background-color: khaki;
+  position: relative;
+  right: 19%;
+  top: 48%;
+}
+.poster#RESTframework {
+  background-color: olive;
+  position: relative;
+  right: -5%;
+  top: 58%;
+}
+
+/* @media screen and (max-width: 928px) {
+  div.poster-selection {
+    display: none;
+  }
+} */
+
+/* svg #Selection {
+  fill: rgba(241, 131, 4, 0.596);
+} */
+
+#Selection:hover {
+  fill: rgba(255, 255, 255, 0.021);
+}
+
+/* svg #Selection1 {
+  fill: red;
+}
+
+#Selection1:hover {
+  fill: white;
+} */
