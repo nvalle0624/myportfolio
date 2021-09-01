@@ -957,7 +957,7 @@ function Work(props) {
               className="posterselection"
               id="Selection"
               fill="rgba(0,0,0,0)"
-              stroke="black"
+              stroke="none"
               strokeWidth="1"
               d="M 533.50,58.75
               C 533.50,58.75 533.75,140.75 533.75,140.75
@@ -2942,7 +2942,7 @@ function Work(props) {
               className="posterselection"
               id="Selection"
               fill="rgba(0,0,0,0)"
-              stroke="black"
+              stroke="none"
               strokeWidth="1"
               d="M 887.75,15.50
               C 887.75,15.50 887.25,65.25 887.25,65.25
@@ -3082,7 +3082,7 @@ function Work(props) {
               className="posterselection"
               id="Selection"
               fill="rgba(0,0,0,0)"
-              stroke="black"
+              stroke="none"
               strokeWidth="1"
               d="M 1289.25,32.50
               C 1289.25,32.50 1212.50,27.25 1212.50,27.25
@@ -3188,7 +3188,7 @@ function Work(props) {
               className="posterselection"
               id="Selection"
               fill="rgba(0,0,0,0)"
-              stroke="black"
+              stroke="none"
               strokeWidth="1"
               d="M 1018.50,124.25
               C 1018.50,124.25 1015.75,189.00 1015.75,189.00
@@ -3403,7 +3403,7 @@ function Work(props) {
               className="posterselection"
               id="Selection"
               fill="rgba(0,0,0,0)"
-              stroke="black"
+              stroke="none"
               strokeWidth="1"
               d="M 1066.50,17.00
               C 1066.50,17.00 1133.00,18.75 1133.00,18.75
