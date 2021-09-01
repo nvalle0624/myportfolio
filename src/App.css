@@ -24,10 +24,6 @@ a:hover {
   transform: scale(1.05);
 }
 
-/* input {
-  display: none;
-} */
-
 .tech-selection {
   display: flex;
   justify-content: center;
@@ -37,7 +33,7 @@ a:hover {
 
 .tech-button {
   border: none;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.021);
   border-radius: 5px;
   color: black;
   padding: 10px 27px;
@@ -99,10 +95,6 @@ a:hover {
 }
 
 .selected-work {
-  /* display: grid;
-  grid-gap: 5px;
-  grid-template-columns: repeat(auto-fit, 100px);
-  grid-template-rows: repeat(2, 100px); */
   display: flex;
   height: 400px;
   justify-content: center;
@@ -265,7 +257,7 @@ a:hover {
 } */
 
 #Selection:hover {
-  fill: rgba(255, 255, 255, 0.021);
+  fill: rgba(44, 121, 145, 0.411);
 }
 
 /* svg #Selection1 {

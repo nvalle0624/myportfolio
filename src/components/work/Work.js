@@ -220,7 +220,6 @@ function Work(props) {
             viewBox="0 0 1290 500"
           >
             <path
-              onClick={handleSelectTech}
               className="posterselection"
               id="Selection"
               fill="lightpink"
@@ -303,6 +302,20 @@ function Work(props) {
               onClick={handleSelectTech}
               className="posterselection"
               id="Selection"
+              fill="rgba(0, 0, 0, 0)"
+              stroke="black"
+              strokeWidth="1"
+              d="M 257.50,4.00
+              C 257.50,4.00 165.00,18.00 165.00,18.00
+                165.00,18.00 167.50,97.50 167.50,97.50
+                167.50,97.50 263.00,76.00 263.00,76.00
+                263.00,76.00 257.50,4.00 257.50,4.00 Z"
+            >
+              Python
+            </path>
+            <path
+              className="posterselection"
+              id="Selection"
               fill="green"
               stroke="black"
               strokeWidth="1"
@@ -355,6 +368,20 @@ function Work(props) {
             </path>
             <path
               onClick={handleSelectTech}
+              className="posterselection"
+              id="Selection"
+              fill="rgba(0, 0, 0, 0)"
+              stroke="black"
+              strokeWidth="1"
+              d="M 243.50,87.00
+              C 243.50,87.00 332.00,65.50 332.00,65.50
+                332.00,65.50 334.00,137.00 334.00,137.00
+                334.00,137.00 246.00,158.00 246.00,158.00
+                246.00,158.00 243.50,87.00 243.50,87.00 Z"
+            >
+              SQL
+            </path>
+            <path
               className="posterselection"
               id="Selection"
               fill="black"
@@ -433,6 +460,20 @@ function Work(props) {
               onClick={handleSelectTech}
               className="posterselection"
               id="Selection"
+              fill="rgba(0, 0, 0, 0)"
+              stroke="black"
+              strokeWidth="1"
+              d="M 187.50,195.00
+              C 187.50,195.00 277.00,164.50 277.00,164.50
+                277.00,164.50 284.50,227.50 284.50,227.50
+                284.50,227.50 194.00,267.00 194.00,267.00
+                194.00,267.00 187.50,195.00 187.50,195.00 Z"
+            >
+              React
+            </path>
+            <path
+              className="posterselection"
+              id="Selection"
               fill="rgba(241, 131, 4, 0.596)"
               stroke="black"
               strokeWidth="1"
@@ -497,7 +538,6 @@ function Work(props) {
               API's
             </path>
             <path
-              onClick={handleSelectTech}
               className="posterselection"
               id="Selection"
               fill="red"
@@ -554,6 +594,20 @@ function Work(props) {
               onClick={handleSelectTech}
               className="posterselection"
               id="Selection"
+              fill="rgba(0, 0, 0, 0)"
+              stroke="black"
+              strokeWidth="1"
+              d="M 247.50,260.50
+              C 247.50,260.50 340.00,222.00 340.00,222.00
+                340.00,222.00 342.50,278.50 342.50,278.50
+                342.50,278.50 250.50,320.50 250.50,320.50
+                250.50,320.50 247.50,260.50 247.50,260.50 Z"
+            >
+              API's
+            </path>
+            <path
+              className="posterselection"
+              id="Selection"
               fill="purple"
               stroke="black"
               strokeWidth="1"
@@ -571,7 +625,6 @@ function Work(props) {
               Redux
             </path>
             <path
-              onClick={handleSelectTech}
               className="posterselection"
               id="Selection"
               fill="lightgreen"
@@ -640,6 +693,20 @@ function Work(props) {
               onClick={handleSelectTech}
               className="posterselection"
               id="Selection"
+              fill="rgba(0, 0, 0, 0)"
+              stroke="none"
+              strokeWidth="1"
+              d="M 364.00,8.00
+              C 364.00,8.00 362.00,71.00 362.00,71.00
+                362.00,71.00 476.00,71.50 476.00,71.50
+                476.00,71.50 475.50,8.00 475.50,8.00
+                475.50,8.00 364.00,8.00 364.00,8.00 Z"
+            >
+              Redux
+            </path>
+            <path
+              className="posterselection"
+              id="Selection"
               fill="teal"
               stroke="black"
               strokeWidth="1"
@@ -654,7 +721,6 @@ function Work(props) {
               CSS
             </path>
             <path
-              onClick={handleSelectTech}
               className="posterselection"
               id="Selection"
               fill="gray"
@@ -714,6 +780,20 @@ function Work(props) {
               onClick={handleSelectTech}
               className="posterselection"
               id="Selection"
+              fill="rgba(0,0,0,0)"
+              stroke="none"
+              strokeWidth="1"
+              d="M 406.00,131.00
+              C 406.00,131.00 487.00,74.00 487.00,74.00
+                487.00,74.00 522.00,135.00 522.00,135.00
+                522.00,135.00 442.00,192.00 442.00,192.00
+                442.00,192.00 406.00,131.00 406.00,131.00 Z"
+            >
+              CSS
+            </path>
+            <path
+              className="posterselection"
+              id="Selection"
               fill="white"
               stroke="black"
               strokeWidth="1"
@@ -740,7 +820,6 @@ function Work(props) {
               JavaScript
             </path>
             <path
-              onClick={handleSelectTech}
               className="posterselection"
               id="Selection"
               fill="black"
@@ -877,6 +956,20 @@ function Work(props) {
               onClick={handleSelectTech}
               className="posterselection"
               id="Selection"
+              fill="rgba(0,0,0,0)"
+              stroke="black"
+              strokeWidth="1"
+              d="M 533.50,58.75
+              C 533.50,58.75 533.75,140.75 533.75,140.75
+                533.75,140.75 718.00,141.25 718.00,141.25
+                718.00,141.25 717.25,61.00 717.25,61.00
+                717.25,61.00 533.50,58.75 533.50,58.75 Z"
+            >
+              JavaScript
+            </path>
+            <path
+              className="posterselection"
+              id="Selection"
               fill="blue"
               stroke="black"
               strokeWidth="1"
@@ -898,7 +991,6 @@ function Work(props) {
               Node.js
             </path>
             <path
-              onClick={handleSelectTech}
               className="posterselection"
               id="Selection"
               fill="white"
@@ -912,7 +1004,6 @@ function Work(props) {
               Node.js
             </path>
             <path
-              onClick={handleSelectTech}
               className="posterselection"
               id="Selection"
               fill="purple"
@@ -960,6 +1051,28 @@ function Work(props) {
               onClick={handleSelectTech}
               className="posterselection"
               id="Selection"
+              fill="rgba(0,0,0,0)"
+              stroke="none"
+              strokeWidth="1"
+              d="M 478.96,177.80
+              C 478.96,177.80 478.96,195.00 478.96,195.00
+                478.96,195.00 478.00,207.00 478.00,207.00
+                478.00,207.00 478.00,233.00 478.00,233.00
+                478.00,233.00 477.00,249.00 477.00,249.00
+                477.00,249.00 477.00,284.00 477.00,284.00
+                477.00,284.00 539.90,285.00 539.90,285.00
+                539.90,285.00 539.90,210.00 539.90,210.00
+                539.90,210.00 539.90,200.04 539.90,200.04
+                539.90,200.04 533.00,193.20 533.00,193.20
+                533.00,193.20 512.00,177.80 512.00,177.80
+                512.00,177.80 498.00,177.80 498.00,177.80
+                498.00,177.80 478.96,177.80 478.96,177.80 Z"
+            >
+              Node.js
+            </path>
+            <path
+              className="posterselection"
+              id="Selection"
               fill="black"
               stroke="black"
               strokeWidth="1"
@@ -983,7 +1096,6 @@ function Work(props) {
               HTML
             </path>
             <path
-              onClick={handleSelectTech}
               className="posterselection"
               id="Selection"
               fill="gold"
@@ -2140,6 +2252,30 @@ function Work(props) {
               onClick={handleSelectTech}
               className="posterselection"
               id="Selection"
+              fill="rgba(0,0,0,0)"
+              stroke="black"
+              strokeWidth="1"
+              d="M 757.00,25.00
+              C 757.00,25.00 757.00,34.00 757.00,34.00
+                757.00,34.00 756.00,50.00 756.00,50.00
+                756.00,50.00 755.00,131.00 755.00,131.00
+                755.00,131.00 754.00,147.00 754.00,147.00
+                754.00,147.00 754.00,168.00 754.00,168.00
+                754.00,168.00 777.00,167.00 777.00,167.00
+                777.00,167.00 834.00,165.00 834.00,165.00
+                834.00,165.00 849.00,164.00 849.00,164.00
+                849.00,164.00 849.00,87.00 849.00,87.00
+                849.00,87.00 848.00,70.00 848.00,70.00
+                848.00,70.00 848.00,24.00 848.00,24.00
+                848.00,24.00 799.00,24.00 799.00,24.00
+                799.00,24.00 782.00,25.00 782.00,25.00
+                782.00,25.00 757.00,25.00 757.00,25.00 Z"
+            >
+              HTML
+            </path>
+            <path
+              className="posterselection"
+              id="Selection"
               fill="magenta"
               stroke="black"
               strokeWidth="1"
@@ -2156,7 +2292,6 @@ function Work(props) {
               RESTframework
             </path>
             <path
-              onClick={handleSelectTech}
               className="posterselection"
               id="Selection"
               fill="black"
@@ -2253,6 +2388,20 @@ function Work(props) {
               onClick={handleSelectTech}
               className="posterselection"
               id="Selection"
+              fill="rgba(0,0,0,0)"
+              stroke="none"
+              strokeWidth="1"
+              d="M 1073.75,216.25
+              C 1073.75,216.25 1071.75,248.50 1071.75,248.50
+                1071.75,248.50 1201.50,291.25 1201.50,291.25
+                1201.50,291.25 1210.50,254.25 1210.50,254.25
+                1210.50,254.25 1073.75,216.25 1073.75,216.25 Z"
+            >
+              RESTframework
+            </path>
+            <path
+              className="posterselection"
+              id="Selection"
               fill="beige"
               stroke="black"
               strokeWidth="1"
@@ -2276,7 +2425,6 @@ function Work(props) {
               MongoDB
             </path>
             <path
-              onClick={handleSelectTech}
               className="posterselection"
               id="Selection"
               fill="black"
@@ -2787,10 +2935,24 @@ function Work(props) {
                 968.00,68.00 967.00,67.00 967.00,67.00
                 967.00,67.00 968.00,67.00 968.00,67.00 Z"
             >
-              Node.js
+              MongoDB
             </path>
             <path
               onClick={handleSelectTech}
+              className="posterselection"
+              id="Selection"
+              fill="rgba(0,0,0,0)"
+              stroke="black"
+              strokeWidth="1"
+              d="M 887.75,15.50
+              C 887.75,15.50 887.25,65.25 887.25,65.25
+                887.25,65.25 1033.75,80.50 1033.75,80.50
+                1033.75,80.50 1038.75,24.75 1038.75,24.75
+                1038.75,24.75 887.75,15.50 887.75,15.50 Z"
+            >
+              MongoDB
+            </path>
+            <path
               className="posterselection"
               id="Selection"
               fill="rgb(25,45,77)"
@@ -2814,7 +2976,6 @@ function Work(props) {
               Postgresql
             </path>
             <path
-              onClick={handleSelectTech}
               className="posterselection"
               id="Selection"
               fill="darkred"
@@ -2920,6 +3081,21 @@ function Work(props) {
               onClick={handleSelectTech}
               className="posterselection"
               id="Selection"
+              fill="rgba(0,0,0,0)"
+              stroke="black"
+              strokeWidth="1"
+              d="M 1289.25,32.50
+              C 1289.25,32.50 1212.50,27.25 1212.50,27.25
+                1212.50,27.25 1200.25,178.00 1200.25,178.00
+                1200.25,178.00 1282.00,192.25 1282.00,192.25
+                1282.00,192.25 1289.50,158.25 1289.50,158.25
+                1289.50,158.25 1289.25,32.50 1289.25,32.50 Z"
+            >
+              Postgresql
+            </path>
+            <path
+              className="posterselection"
+              id="Selection"
               fill="rgb(130,94,171"
               stroke="black"
               strokeWidth="1"
@@ -2938,7 +3114,6 @@ function Work(props) {
               NoSql
             </path>
             <path
-              onClick={handleSelectTech}
               className="posterselection"
               id="Selection"
               fill="purple"
@@ -3012,6 +3187,20 @@ function Work(props) {
               onClick={handleSelectTech}
               className="posterselection"
               id="Selection"
+              fill="rgba(0,0,0,0)"
+              stroke="black"
+              strokeWidth="1"
+              d="M 1018.50,124.25
+              C 1018.50,124.25 1015.75,189.00 1015.75,189.00
+                1015.75,189.00 1144.25,219.75 1144.25,219.75
+                1144.25,219.75 1150.25,152.00 1150.25,152.00
+                1150.25,152.00 1018.50,124.25 1018.50,124.25 Z"
+            >
+              NoSql
+            </path>
+            <path
+              className="posterselection"
+              id="Selection"
               fill="rgb(60,93,214)"
               stroke="black"
               strokeWidth="1"
@@ -3029,7 +3218,6 @@ function Work(props) {
               Express.js
             </path>
             <path
-              onClick={handleSelectTech}
               className="posterselection"
               id="Selection"
               fill="black"
@@ -3077,6 +3265,20 @@ function Work(props) {
               onClick={handleSelectTech}
               className="posterselection"
               id="Selection"
+              fill="rgba(0,0,0,0)"
+              stroke="black"
+              strokeWidth="1"
+              d="M 696.75,149.75
+              C 696.75,149.75 697.00,190.25 697.00,190.25
+                697.00,190.25 743.50,191.75 743.50,191.75
+                743.50,191.75 743.75,149.50 743.75,149.50
+                743.75,149.50 696.75,149.75 696.75,149.75 Z"
+            >
+              Express
+            </path>
+            <path
+              className="posterselection"
+              id="Selection"
               fill="rgb(60,93,214)"
               stroke="black"
               strokeWidth="1"
@@ -3098,7 +3300,6 @@ function Work(props) {
               Bootstrap
             </path>
             <path
-              onClick={handleSelectTech}
               className="posterselection"
               id="Selection"
               fill="white"
@@ -3201,6 +3402,20 @@ function Work(props) {
               onClick={handleSelectTech}
               className="posterselection"
               id="Selection"
+              fill="rgba(0,0,0,0)"
+              stroke="black"
+              strokeWidth="1"
+              d="M 1066.50,17.00
+              C 1066.50,17.00 1133.00,18.75 1133.00,18.75
+                1133.00,18.75 1124.00,127.75 1124.00,127.75
+                1124.00,127.75 1062.00,116.25 1062.00,116.25
+                1062.00,116.25 1066.50,17.00 1066.50,17.00 Z"
+            >
+              Bootstrap
+            </path>
+            <path
+              className="posterselection"
+              id="Selection"
               fill="yellow"
               stroke="black"
               strokeWidth="1"
@@ -3228,7 +3443,6 @@ function Work(props) {
               Django
             </path>
             <path
-              onClick={handleSelectTech}
               className="posterselection"
               id="Selection"
               fill="black"
@@ -3295,6 +3509,38 @@ function Work(props) {
               C 838.00,293.00 839.00,302.00 839.00,302.00
                 824.55,302.13 819.31,307.04 819.00,295.00
                 819.00,295.00 838.00,293.00 838.00,293.00 Z"
+            >
+              Django
+            </path>
+            <path
+              onClick={handleSelectTech}
+              className="posterselection"
+              id="Selection"
+              fill="rgba(0,0,0,0)"
+              stroke="black"
+              strokeWidth="1"
+              d="M 782.00,182.00
+              C 782.00,182.00 783.00,203.00 783.00,203.00
+                783.00,203.00 785.00,251.00 785.00,251.00
+                785.00,251.00 786.15,266.00 786.15,266.00
+                786.15,266.00 786.15,278.00 786.15,278.00
+                786.15,278.00 789.00,285.00 789.00,285.00
+                789.00,285.00 797.00,310.89 797.00,310.89
+                799.86,310.87 806.45,309.24 808.44,310.89
+                810.05,312.00 810.46,314.84 811.85,316.96
+                814.17,320.50 816.89,321.72 821.00,321.96
+                821.00,321.96 849.00,318.95 849.00,318.95
+                851.25,318.70 858.95,317.99 860.43,316.83
+                863.67,314.27 861.05,300.22 861.00,296.00
+                861.00,296.00 860.00,256.00 860.00,256.00
+                860.00,256.00 859.04,244.00 859.04,244.00
+                859.04,244.00 859.04,228.00 859.04,228.00
+                859.04,228.00 858.00,211.00 858.00,211.00
+                858.00,211.00 857.00,179.00 857.00,179.00
+                857.00,179.00 837.00,180.00 837.00,180.00
+                837.00,180.00 816.00,181.00 816.00,181.00
+                816.00,181.00 796.00,182.00 796.00,182.00
+                796.00,182.00 782.00,182.00 782.00,182.00 Z"
             >
               Django
             </path>
