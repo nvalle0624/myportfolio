@@ -3274,7 +3274,7 @@ function Work(props) {
                 743.50,191.75 743.75,149.50 743.75,149.50
                 743.75,149.50 696.75,149.75 696.75,149.75 Z"
             >
-              Express
+              Express.js
             </path>
             <path
               className="posterselection"
