@@ -3,8 +3,8 @@ import React from "react";
 function Home(props) {
   return (
     <React.Fragment>
-      <h1>Home</h1>
       <div className="intro-container">
+        <h1>Home</h1>
         <div className="intro">
           <p>
             Hello, world!

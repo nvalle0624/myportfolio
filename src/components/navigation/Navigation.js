@@ -72,7 +72,7 @@ function Navigation(props) {
   return (
     <React.Fragment>
       <div className={classes.root}>
-        <AppBar position="static">
+        <AppBar className="navBar" position="static">
           <Toolbar style={{ display: "flex", justifyContent: "center" }}>
             <Typography variant="h6" className={classes.title}>
               {}
@@ -107,7 +107,7 @@ function Navigation(props) {
                     {menuItems.map((menuItem) => {
                       const { title, pageURL } = menuItem;
                       return (
-                        <MenuItem onClick={() => handleMenuClick(pageURL)} key={title}>
+                        <MenuItem className="menuItem" onClick={() => handleMenuClick(pageURL)} key={title}>
                           {title}
                         </MenuItem>
                       );
@@ -121,6 +121,7 @@ function Navigation(props) {
                     const { title, pageURL } = menuItem;
                     return (
                       <Button
+                        className="menuItem"
                         variant="contained"
                         disableRipple
                         style={{ margin: "10px" }}
