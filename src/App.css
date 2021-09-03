@@ -13,14 +13,20 @@ body {
   box-shadow: 10px 10px #ffffff;
 } */
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
   .navBtnContainer {
     width: 100%;
     display: flex;
     justify-content: center;
   }
-}
+} */
 
+.navBtnContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 81px;
+}
 .MuiToolbar-root {
   background-color: black;
   position: fixed !important;
@@ -28,9 +34,24 @@ body {
   width: 100%;
 }
 
+.makeStyles-headerOptions-4 {
+  display: flex;
+  justify-content: center;
+}
+
 .menuItem {
-  background-color: #fa8bff;
-  background-image: linear-gradient(45deg, #fa8bff 0%, #2bd2ff 52%, #2bff88 90%);
+  background-color: black;
+  color: white;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 30px;
+}
+.menuItem:hover {
+  background-color: rgba(255, 255, 255, 0.219);
+}
+
+.menuItem.current {
+  background-color: rgba(255, 255, 255, 0.219);
 }
 
 h1 {
@@ -43,9 +64,6 @@ h1 {
   justify-content: center;
 }
 
-/* a:hover {
-  background-color: rgba(117, 255, 225, 0.61);
-} */
 #cardtop {
   background-color: #0093e9;
   background-image: linear-gradient(45deg, #0093e9 0%, #80d0c7 50%, #ffffff 100%);
@@ -224,18 +242,13 @@ h1 {
   align-items: center;
 }
 
-.control-button:hover {
-  background-color: rgba(29, 118, 201, 0.61);
-  border-radius: 5px;
-}
-
 .controls-container {
   display: flex;
   flex-direction: row;
   /* justify-content: center; */
   width: 100%;
   height: fit-content;
-
+  background-color: black;
   position: relative;
 
   /* top: 0;
@@ -243,10 +256,15 @@ h1 {
 }
 
 .MuiSlider-rail {
-  color: black;
+  color: white;
 }
+.MuiSlider-root:hover {
+  background-color: rgba(255, 255, 255, 0.219);
+  border-radius: 5px;
+}
+
 .MuiSlider-thumb {
-  color: red;
+  color: white;
 }
 
 #root > div > div.page-container > div.controls-container > span {
@@ -254,15 +272,26 @@ h1 {
   margin-top: 18px;
 }
 
+#root > div > div.page-container > div.controls-container > span:hover {
+  background-color: rgba(255, 255, 255, 0.219);
+  border-radius: 5px;
+}
+
 #deselectButton {
   float: right;
   position: absolute;
   top: 0;
   right: 0;
+  cursor: pointer;
+}
+.control-button:hover {
+  background-color: rgba(255, 255, 255, 0.219);
+  border-radius: 5px;
 }
 
 #muteButton {
   margin-right: 10px;
+  cursor: pointer;
   /* float: left;
   position: absolute;
   top: 0;

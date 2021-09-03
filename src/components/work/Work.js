@@ -21,6 +21,7 @@ import VolumeUpIcon from "@material-ui/icons/VolumeUp";
 import Slider from "@material-ui/core/Slider";
 
 import logoList from "./logolist";
+import { Typography } from "@material-ui/core";
 console.log(logoList);
 
 const audios = [
@@ -50,7 +51,12 @@ function Work(props) {
   const [volume, setVolume] = useState(0);
 
   const handleVolume = (event, newVolume) => {
-    setVolume(newVolume);
+    if (selectMute === "unmute") {
+      handleMute();
+      setVolume(1);
+    } else {
+      setVolume(newVolume);
+    }
     for (let i of audioTags) {
       i.volume = newVolume;
     }
@@ -63,6 +69,9 @@ function Work(props) {
     if (selectMute === "unmute") {
       setSelectMute("mute");
       setMuteIcon(<VolumeUpIcon />);
+      for (let i of audioTags) {
+        i.volume = 1;
+      }
       setVolume(1);
     } else {
       setSelectMute("unmute");
@@ -77,7 +86,7 @@ function Work(props) {
       // i.currentTime = 0;
       // i.play();
       i.load();
-      i.volume = 0.4;
+      i.volume = volume;
       i.play();
     }
   };
@@ -86,7 +95,7 @@ function Work(props) {
     const handlePlay = () => {
       for (let i of audioTags) {
         i.load();
-        i.volume = 0.4;
+        i.volume = volume;
         i.play();
       }
     };
@@ -96,7 +105,7 @@ function Work(props) {
       }
     }, 18015);
     return () => clearInterval(interval);
-  }, [audioTags, selectMute]);
+  }, [audioTags, selectMute, volume]);
 
   for (let a of selectedTech) {
     audioHTML = document.getElementById("audio-" + a);
@@ -3588,7 +3597,7 @@ function Work(props) {
           />
 
           <button className="control-button" id="deselectButton" onClick={handleDeselect}>
-            Reset Selection
+            <Typography>Reset Selection</Typography>
           </button>
         </div>
         <h4 style={{ display: "flex", justifyContent: "center" }}>Select projects that contain:</h4>

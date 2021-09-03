@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -36,12 +36,36 @@ function Navigation(props) {
   const open = Boolean(anchorEl);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("xs"));
+  const [selectPage, setSelectPage] = useState("/");
+
+  const handleSelectPage = () => {
+    setSelectPage(window.location.pathname);
+    let choices = Array.from(document.getElementsByClassName("menuItem"));
+    console.log(choices);
+    for (let i of choices) {
+      if (i.id === selectPage) {
+        i.className += " current";
+      } else {
+        i.className = i.className.replace(" current", "");
+      }
+    }
+  };
+
+  useEffect(() => {
+    handleSelectPage(window.location.pathname);
+  });
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
   const handleMenuClick = (pageURL) => {
+    let choices = Array.from(document.getElementsByClassName("menuItem"));
+    for (let i of choices) {
+      i.className = i.className.replace(" current", "");
+    }
+    handleSelectPage();
+    setSelectPage(pageURL);
     history.push(pageURL);
     setAnchorEl(null);
   };
@@ -120,16 +144,16 @@ function Navigation(props) {
                   {menuItems.map((menuItem) => {
                     const { title, pageURL } = menuItem;
                     return (
-                      <Button
+                      <div
                         className="menuItem"
                         variant="contained"
                         disableRipple
-                        style={{ margin: "10px" }}
                         onClick={() => handleMenuClick(pageURL)}
-                        key={title}
+                        key={pageURL}
+                        id={pageURL}
                       >
                         {title}
-                      </Button>
+                      </div>
                     );
                   })}
                 </div>
