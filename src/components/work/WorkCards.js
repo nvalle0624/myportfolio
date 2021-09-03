@@ -1,5 +1,6 @@
 import BananaDogCard from "./bananadogCard";
 import FunReaderCard from "./funreaderCard";
+import PortfolioCard from "./portfolioCard";
 // import bananadogIMG from "./static/bananadog.jpg";
 // import funreaderIMG from "./static/funreader.jpg";
 
@@ -9,6 +10,7 @@ export const workCards = [
     tags={["JavaScript", "React", "Redux", "Node.js", "Express.js", "MongoDB", "HTML", "API's"]}
     name="funreader"
   />,
+  <PortfolioCard tags={["JavaScript", "React", "Node.js", "HTML", "CSS"]} name="portfolio" />,
 ];
 
 // export const allWork = [

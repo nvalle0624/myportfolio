@@ -40,18 +40,18 @@ function CardTemplate(props) {
   };
 
   return (
-    <Card className={classes.root} style={{ background: "lightblue", boxShadow: "1px 1px black" }}>
+    <Card className={classes.root} style={{ boxShadow: "1px 1px black" }}>
       <a href={props.href} target="_blank" rel="noreferrer" style={{ textDecoration: "none" }}>
         <CardHeader title={props.title} subheader={props.date} id="cardtop" />
       </a>
       <CardMedia className={classes.media} image={props.image} title={props.title} label="image" />
 
       <CardContent style={{ height: "200px" }}>
-        <div style={{ display: "flex", flexDirection: "wrap" }}>
+        <div style={{ display: "flex", flexWrap: "wrap" }}>
           {props.tags.map((tag) => (
-            <div style={{ border: "1px solid black", borderRadius: "10px", padding: "5px" }} key={props.name + tag}>
+            <span className="tech-span" key={tag}>
               {tag}
-            </div>
+            </span>
           ))}
         </div>
         <Typography

@@ -72,12 +72,12 @@ function Navigation(props) {
   return (
     <React.Fragment>
       <div className={classes.root}>
-        <AppBar className="navBar" position="static">
+        <AppBar position="static">
           <Toolbar style={{ display: "flex", justifyContent: "center" }}>
             <Typography variant="h6" className={classes.title}>
               {}
             </Typography>
-            <div>
+            <div className="navBtnContainer">
               {isMobile ? (
                 <>
                   <IconButton

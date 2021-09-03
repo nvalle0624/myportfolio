@@ -9,9 +9,9 @@ import CardActions from "@material-ui/core/CardActions";
 import Collapse from "@material-ui/core/Collapse";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import bananadogIMG from "./static/bananadog.jpg";
+import portfolioImage from "./static/portfolioImage.jpg";
+
 // per material ui docs
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function BananaDogCard(props) {
+function PortfolioCard(props) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -43,18 +43,13 @@ function BananaDogCard(props) {
 
   return (
     <Card className={classes.root} style={{ boxShadow: "1px 1px black" }}>
-      <a
-        href="https://github.com/nvalle0624/kenzie-q4-capstone"
-        target="_blank"
-        rel="noreferrer"
-        style={{ textDecoration: "none" }}
-      >
-        <CardHeader title="BananaDog" subheader="July 2021" id="cardtop" />
+      <a href={"/"} target="_blank" rel="noreferrer" style={{ textDecoration: "none" }}>
+        <CardHeader title="This Site!" subheader="Aug 2021" id="cardtop" />
       </a>
-      <CardMedia className={classes.media} image={bananadogIMG} title="BananaDog" label="image" />
+      <CardMedia className={classes.media} image={portfolioImage} title="Portfolio" label="image" />
 
       <CardContent style={{ height: "200px" }}>
-        <div style={{ display: "flex", flexDirection: "wrap" }}>
+        <div style={{ display: "flex", flexWrap: "wrap" }}>
           {props.tags.map((tag) => (
             <span className="tech-span" key={tag}>
               {tag}
@@ -68,9 +63,7 @@ function BananaDogCard(props) {
           style={{ marginTop: "20px" }}
           label="description"
         >
-          An application for a dog training business where trainers and clients can book sessions, communicate, and
-          access a persistent log of dogs’ info and daily reports. Allows trainers to automatically log times and notes
-          for trainings/activities per dog, per session.
+          This very web application, showcasing React, and responsive design.
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -88,27 +81,9 @@ function BananaDogCard(props) {
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography label="contributions">
-            <li>Spearheaded development of custom CRM platform for dog trainer’s business in team of 3</li>
-            <li>
-              Planned project’s features, presented ideas through organized and detailed outlines, receiving glowing
-              feedback from team
-            </li>
-            <li>Created development roadmap and schedule, delegated tasks, providing clarity for team success</li>
-            <li>Led the design and programming of all front-end app functionality and back-end data relationships</li>
-            <li>
-              Developed features such as: social media style profiles, photo and video uploads, calendar, scheduling,
-              full profile and report editing, auto-report generation, and private messaging
-            </li>
-            <li>
-              Maintained correspondence with team members via detailed daily briefings, collaborated in shared virtual
-              workspaces, keeping team updated and on schedule
-            </li>
-            <li>Initiated preparations for checkpoints, created scripts and presentation structure </li>
-            <li>Completed capstone well within 2 week deadline</li>
-            <li>
-              Selected as a featured project for cohort after surpassing project requirements and course expectations
-              with exemplary app and presentation
-            </li>
+            <li>Sole designer and engineer</li>
+            <li>Implemented filtering and reposnive UI</li>
+            <li>Audio interation with DOM</li>
           </Typography>
         </CardContent>
       </Collapse>
@@ -116,4 +91,4 @@ function BananaDogCard(props) {
   );
 }
 
-export default BananaDogCard;
+export default PortfolioCard;

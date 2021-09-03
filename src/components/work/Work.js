@@ -18,6 +18,7 @@ import synth3 from "./static/audio/Aquamarine Synth.mp3";
 import synth4 from "./static/audio/80s Classic Lead Synth.mp3";
 import VolumeOffIcon from "@material-ui/icons/VolumeOff";
 import VolumeUpIcon from "@material-ui/icons/VolumeUp";
+import Slider from "@material-ui/core/Slider";
 
 import logoList from "./logolist";
 console.log(logoList);
@@ -46,6 +47,15 @@ function Work(props) {
   const [selectedWork, setSelectedWork] = useState(workCards);
   const [selectMute, setSelectMute] = useState("unmute");
   const [muteIcon, setMuteIcon] = useState(<VolumeOffIcon />);
+  const [volume, setVolume] = useState(0);
+
+  const handleVolume = (event, newVolume) => {
+    setVolume(newVolume);
+    for (let i of audioTags) {
+      i.volume = newVolume;
+    }
+  };
+
   let newSelectedWork = [];
   let audioHTML = "";
 
@@ -53,9 +63,11 @@ function Work(props) {
     if (selectMute === "unmute") {
       setSelectMute("mute");
       setMuteIcon(<VolumeUpIcon />);
+      setVolume(1);
     } else {
       setSelectMute("unmute");
       setMuteIcon(<VolumeOffIcon />);
+      setVolume(0);
     }
   };
 
@@ -65,6 +77,7 @@ function Work(props) {
       // i.currentTime = 0;
       // i.play();
       i.load();
+      i.volume = 0.4;
       i.play();
     }
   };
@@ -73,14 +86,17 @@ function Work(props) {
     const handlePlay = () => {
       for (let i of audioTags) {
         i.load();
+        i.volume = 0.4;
         i.play();
       }
     };
     const interval = setInterval(() => {
-      handlePlay();
+      if (selectMute === "mute") {
+        handlePlay();
+      }
     }, 18015);
     return () => clearInterval(interval);
-  }, [audioTags]);
+  }, [audioTags, selectMute]);
 
   for (let a of selectedTech) {
     audioHTML = document.getElementById("audio-" + a);
@@ -202,25 +218,11 @@ function Work(props) {
     <React.Fragment>
       <h1>Projects</h1>
       <div className="page-container">
-        <div className="controls-container">
-          <button
-            style={{ width: "50px", display: "flex", justifyContent: "center" }}
-            className="control-button"
-            id="muteButton"
-            onClick={handleMute}
-          >
-            {muteIcon}
-          </button>
-
-          <button className="control-button" id="deselectButton" onClick={handleDeselect}>
-            reset selection
-          </button>
-        </div>
-
         <div className="poster-selection">
           <div className="poster-container">
             <svg
-              style={{ position: "absolute" }}
+              className="sgv"
+              style={{ position: "relative" }}
               xmlns="http://www.w3.org/2000/svg"
               width="1290px"
               height="500px"
@@ -3566,7 +3568,30 @@ function Work(props) {
           ))} */}
           </div>
         </div>
-        <h4>Select projects that contain:</h4>
+        <div className="controls-container">
+          <button
+            style={{ width: "50px", display: "flex", justifyContent: "center" }}
+            className="control-button"
+            id="muteButton"
+            onClick={handleMute}
+          >
+            {muteIcon}
+          </button>
+          <Slider
+            value={volume}
+            step={0.1}
+            min={0}
+            max={1}
+            defaultValue={1}
+            onChange={handleVolume}
+            aria-labelledby="continuous-slider"
+          />
+
+          <button className="control-button" id="deselectButton" onClick={handleDeselect}>
+            Reset Selection
+          </button>
+        </div>
+        <h4 style={{ display: "flex", justifyContent: "center" }}>Select projects that contain:</h4>
         <div className="tech-selection">
           {techButtons.map((tech) => (
             <div className="button-backdrop">

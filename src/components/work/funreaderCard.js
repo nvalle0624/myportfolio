@@ -41,7 +41,7 @@ function FunReaderCard(props) {
   };
 
   return (
-    <Card className={classes.root} style={{ background: "lightblue", boxShadow: "1px 1px black" }}>
+    <Card className={classes.root} style={{ boxShadow: "1px 1px black" }}>
       <a
         href="https://gitlab.com/nvalle0624/kapstoneq2"
         target="_blank"
