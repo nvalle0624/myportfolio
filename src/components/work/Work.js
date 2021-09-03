@@ -64,7 +64,7 @@ function Work(props) {
     for (let i of audioTags) {
       // i.currentTime = 0;
       // i.play();
-      // i.load();
+      i.load();
       i.play();
     }
   };
@@ -72,10 +72,8 @@ function Work(props) {
   useEffect(() => {
     const handlePlay = () => {
       for (let i of audioTags) {
-        i.currentTime = 0;
-        if (i.currentTime === 0) {
-          i.play();
-        }
+        i.load();
+        i.play();
       }
     };
     const interval = setInterval(() => {
@@ -101,7 +99,7 @@ function Work(props) {
     let tech = event.currentTarget.innerHTML;
     setSelectedTech(selectedTech);
     setSelectedWork(selectedWork);
-    handleReplay();
+    // handleReplay();
 
     const isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
     if (isChrome) {

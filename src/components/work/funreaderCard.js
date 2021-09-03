@@ -77,7 +77,7 @@ function FunReaderCard(props) {
           <ExpandMoreIcon />
         </IconButton>
       </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
+      <Collapse className="collapse" in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography>
             <li>Spearheaded development of custom CRM platform for dog trainer’s business in team of 3</li>
