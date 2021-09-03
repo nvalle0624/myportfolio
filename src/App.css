@@ -21,6 +21,20 @@ body {
   }
 } */
 
+.email-input {
+  background-color: white;
+  border-radius: 5px;
+}
+
+.message-input {
+  background-color: white;
+  border-radius: 5px;
+}
+
+.form-container > form > div > label {
+  color: white;
+}
+
 .navBtnContainer {
   width: 100%;
   display: flex;
@@ -42,9 +56,11 @@ body {
 .menuItem {
   background-color: black;
   color: white;
-  margin-right: auto;
-  margin-left: auto;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
   padding: 30px;
+  cursor: pointer;
 }
 .menuItem:hover {
   background-color: rgba(255, 255, 255, 0.219);
@@ -54,34 +70,47 @@ body {
   background-color: rgba(255, 255, 255, 0.219);
 }
 
-h1 {
+h1,
+h3 {
   display: flex;
   justify-content: center;
+  margin: 5%;
+}
+
+.intro-container {
+  margin-bottom: 60%;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .intro {
   display: flex;
   justify-content: center;
+  margin-left: 30%;
+  margin-right: 30%;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 2%;
 }
 
 #cardtop {
   background-color: #0093e9;
-  background-image: linear-gradient(45deg, #0093e9 0%, #80d0c7 50%, #ffffff 100%);
   box-shadow: 10px 10px #ffffff;
 }
 .MuiCardContent-root {
   background-color: #0093e9;
-  background-image: linear-gradient(45deg, #0093e9 0%, #80d0c7 50%, #ffffff 100%);
+
   box-shadow: 10px 10px #ffffff;
 }
 .MuiCardActions-root {
   background-color: #0093e9;
-  background-image: linear-gradient(45deg, #0093e9 0%, #80d0c7 50%, #ffffff 100%);
   box-shadow: 10px 10px #ffffff;
 }
 
 #cardtop:hover {
-  background-color: rgba(117, 255, 225, 0.61);
+  background-color: rgba(88, 52, 218, 0.61);
 }
 .project-card:hover {
   transform: scale(1.05);
@@ -201,19 +230,46 @@ h1 {
   background-color: yellow;
 }
 
+.page-container {
+  margin-top: 7%;
+  margin-bottom: 100%;
+}
+
 .form-container {
-  margin: 40px;
+  margin-top: 20%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 50%;
 }
 
 .about-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  margin-top: 10%;
 }
 
 .aboutme {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 2%;
+  margin-top: 8%;
+  margin-bottom: 30%;
   display: flex;
   flex-direction: column;
   width: 70%;
+  margin: auto;
+}
+
+.aboutme-img {
+  width: 30%;
+  margin: auto;
+}
+
+.about-img-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .tech-span {

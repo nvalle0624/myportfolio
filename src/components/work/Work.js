@@ -225,7 +225,6 @@ function Work(props) {
 
   return (
     <React.Fragment>
-      <h1>Projects</h1>
       <div className="page-container">
         <div className="poster-selection">
           <div className="poster-container">

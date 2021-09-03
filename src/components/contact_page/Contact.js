@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, InputLabel, TextField } from "@material-ui/core";
 
 const ContactForm = () => {
-  const [status, setStatus] = useState("Submit");
+  const [status, setStatus] = useState("Send");
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("Sending...");
@@ -25,16 +25,19 @@ const ContactForm = () => {
   };
   return (
     <React.Fragment>
-      <h1>Contact</h1>
       <div className="form-container">
         <form onSubmit={handleSubmit}>
           <div>
-            <InputLabel htmlFor="email">Email:</InputLabel>
+            <InputLabel htmlFor="email" className="label">
+              Email:
+            </InputLabel>
             <TextField required className="email-input" variant="outlined" type="email" fullWidth />
           </div>
           <br></br>
           <div>
-            <InputLabel htmlFor="message">Message:</InputLabel>
+            <InputLabel htmlFor="message" className="label">
+              Message:
+            </InputLabel>
             <TextField
               className="message-input"
               fullWidth
@@ -45,7 +48,11 @@ const ContactForm = () => {
               required
             />
           </div>
-          <Button variant="contained" style={{ margin: "10px" }} type="submit">
+          <Button
+            variant="contained"
+            style={{ margin: "10px", backgroundColor: "black", color: "white" }}
+            type="submit"
+          >
             {status}
           </Button>
         </form>

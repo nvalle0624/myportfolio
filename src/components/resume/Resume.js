@@ -6,8 +6,7 @@ import resumePDF from "./nicholas_valle_resume.pdf";
 function Resume() {
   return (
     <React.Fragment>
-      <h1>Resumé</h1>
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div style={{ display: "flex", justifyContent: "center", marginTop: "10%" }}>
         <Document file={resumePDF}>
           <div style={{ border: "1px solid black" }}>
             <Page pageNumber={1} />
