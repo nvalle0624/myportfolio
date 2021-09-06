@@ -489,8 +489,9 @@ h3 {
 }
 
 .work-container {
-  margin-left: 2%;
-  margin-right: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .selected-work {

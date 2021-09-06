@@ -20,6 +20,8 @@ import VolumeOffIcon from "@material-ui/icons/VolumeOff";
 import VolumeUpIcon from "@material-ui/icons/VolumeUp";
 import Slider from "@material-ui/core/Slider";
 import RotateLeftIcon from "@material-ui/icons/RotateLeft";
+import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 
 import logoList from "./logolist";
 import { Typography } from "@material-ui/core";
@@ -3630,12 +3632,18 @@ function Work(props) {
         </div>
         <br></br>
         <div className="work-container">
+          <div>
+            <ArrowBackIosIcon fontSize="large" className="left-arrow" />
+          </div>
           <div className="selected-work">
             {selectedWork.map((card) => (
               <div className="project-card" style={{ padding: "10px" }} key={card.props.name}>
                 {card}
               </div>
             ))}
+          </div>
+          <div>
+            <ArrowForwardIosIcon fontSize="large" className="right-arrow" />
           </div>
         </div>
       </div>
@@ -3654,6 +3662,7 @@ function Work(props) {
           ></audio>
         ))}
       </div>
+
       <div className="background1"></div>
       <div className="background2"></div>
     </React.Fragment>
