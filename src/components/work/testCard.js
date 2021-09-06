@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function BananaDogCard(props) {
+function TestCard(props) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -49,7 +49,7 @@ function BananaDogCard(props) {
         rel="noreferrer"
         style={{ textDecoration: "none" }}
       >
-        <CardHeader title="BananaDog" subheader="July 2021" id="cardtop" />
+        <CardHeader title="Test Card" subheader="July 2021" id="cardtop" />
       </a>
       <CardMedia className={classes.media} image={bananadogIMG} title="BananaDog" label="image" />
 
@@ -85,7 +85,7 @@ function BananaDogCard(props) {
           <ExpandMoreIcon />
         </IconButton>
       </CardActions>
-      <Collapse in={expanded} orientation="horizontal" timeout="auto" unmountOnExit>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography label="contributions">
             <li>Spearheaded development of custom CRM platform for dog trainer’s business in team of 3</li>
@@ -116,4 +116,4 @@ function BananaDogCard(props) {
   );
 }
 
-export default BananaDogCard;
+export default TestCard;

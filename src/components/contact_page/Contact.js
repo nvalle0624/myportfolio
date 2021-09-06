@@ -31,7 +31,14 @@ const ContactForm = () => {
             <InputLabel htmlFor="email" className="label">
               Email:
             </InputLabel>
-            <TextField required className="email-input" variant="outlined" type="email" fullWidth />
+            <TextField
+              required
+              className="email-input"
+              variant="outlined"
+              type="email"
+              placeholder="Your email"
+              fullWidth
+            />
           </div>
           <br></br>
           <div>
@@ -45,6 +52,7 @@ const ContactForm = () => {
               margin="normal"
               rows={10}
               variant="outlined"
+              placeholder="Send me a message"
               required
             />
           </div>
@@ -57,6 +65,8 @@ const ContactForm = () => {
           </Button>
         </form>
       </div>
+      <div className="background1"></div>
+      <div className="background2"></div>
     </React.Fragment>
   );
 };

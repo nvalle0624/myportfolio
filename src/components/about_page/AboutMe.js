@@ -7,11 +7,23 @@ function AboutMe(props) {
   return (
     <React.Fragment>
       <div className="about-container">
-        <div className="about-img-container">
-          <img alt="me" src={nicksolo} className="aboutme-img"></img>
-        </div>
         <div className="aboutme">
-          <Typography paragraph>
+          <Typography variant="h5" paragraph className="aboutme-line">
+            Graudate of Kenzie Academy's Front-End and Full-Stack Software Engineer certificate programs
+          </Typography>
+          <Typography variant="h5" paragraph className="aboutme-line">
+            Focus on web development, but interested in general software development and continued learning
+          </Typography>
+          <Typography variant="h5" paragraph className="aboutme-line">
+            Self-learner and team player, exhilerated by problem-solving and making things come together
+          </Typography>
+          <Typography variant="h5" paragraph className="aboutme-line">
+            New York native with a background in music as a session musician and sound technician
+          </Typography>
+          <Typography variant="h5" paragraph className="aboutme-line">
+            Aiming to merge passions professionally with future projects
+          </Typography>
+          {/* <Typography paragraph>
             I love programming. I couldn't always say that, because I haven't always been a programmer. I'm also a
             passionately obsessive self-taught guitarist who grew up with a strict focus on academics. I originally
             shipped out to Northeastern University after high school to study philosophy and political science, only to
@@ -38,16 +50,21 @@ function AboutMe(props) {
             grinding for solutions; it’s exhilarating and I’m so excited for the journey that lies ahead.
           </Typography>
           <Typography paragraph>
-            I’ve presented here, in the ‘works’ section of this website, some of the projects that paved the way for my
-            career in web development. While I hope to gain a multitude of varying experiences and bodies of knowledge
-            in web development and software engineering throughout my career, music is still and will always be a major
-            part of my life and I look forward to someday blending those practices into a single project.
-          </Typography>
+            I’ve presented here, in the ‘projects’ section of this website, some of the projects that paved the way for
+            my career in web development. While I hope to gain a multitude of varying experiences and bodies of
+            knowledge in web development and software engineering throughout my career, music is still and will always
+            be a major part of my life and I look forward to someday blending those practices into a single project.
+          </Typography> */}
         </div>
-        <div className="about-img-container">
-          <img alt="me" src={nickjump} className="aboutme-img"></img>
+        <div className="about-img-container-1">
+          <img alt="me" src={nicksolo} className="aboutme-img-1"></img>
         </div>
+        {/* <div className="about-img-container-2">
+          <img alt="me" src={nickjump} className="aboutme-img-2"></img>
+        </div> */}
       </div>
+      <div className="background1"></div>
+      <div className="background2"></div>
     </React.Fragment>
   );
 }

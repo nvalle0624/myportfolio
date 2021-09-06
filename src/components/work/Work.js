@@ -19,10 +19,11 @@ import synth4 from "./static/audio/80s Classic Lead Synth.mp3";
 import VolumeOffIcon from "@material-ui/icons/VolumeOff";
 import VolumeUpIcon from "@material-ui/icons/VolumeUp";
 import Slider from "@material-ui/core/Slider";
+import RotateLeftIcon from "@material-ui/icons/RotateLeft";
 
 import logoList from "./logolist";
 import { Typography } from "@material-ui/core";
-console.log(logoList);
+// console.log(logoList);
 
 const audios = [
   { audio: drums, name: "Python" },
@@ -49,36 +50,8 @@ function Work(props) {
   const [selectMute, setSelectMute] = useState("unmute");
   const [muteIcon, setMuteIcon] = useState(<VolumeOffIcon />);
   const [volume, setVolume] = useState(0);
-
-  const handleVolume = (event, newVolume) => {
-    if (selectMute === "unmute") {
-      handleMute();
-      setVolume(1);
-    } else {
-      setVolume(newVolume);
-    }
-    for (let i of audioTags) {
-      i.volume = newVolume;
-    }
-  };
-
   let newSelectedWork = [];
   let audioHTML = "";
-
-  const handleMute = (event) => {
-    if (selectMute === "unmute") {
-      setSelectMute("mute");
-      setMuteIcon(<VolumeUpIcon />);
-      for (let i of audioTags) {
-        i.volume = 1;
-      }
-      setVolume(1);
-    } else {
-      setSelectMute("unmute");
-      setMuteIcon(<VolumeOffIcon />);
-      setVolume(0);
-    }
-  };
 
   const audioTags = Array.from(document.getElementsByClassName("audio-element"));
   const handleReplay = () => {
@@ -94,16 +67,15 @@ function Work(props) {
   useEffect(() => {
     const handlePlay = () => {
       for (let i of audioTags) {
-        i.load();
+        // i.load();
         i.volume = volume;
         i.play();
       }
     };
+    handlePlay();
     const interval = setInterval(() => {
-      if (selectMute === "mute") {
-        handlePlay();
-      }
-    }, 18015);
+      handlePlay();
+    }, 39000);
     return () => clearInterval(interval);
   }, [audioTags, selectMute, volume]);
 
@@ -115,6 +87,33 @@ function Work(props) {
       audioHTML.muted = true;
     }
   }
+
+  const handleVolume = (event, newVolume) => {
+    if (selectMute === "unmute") {
+      handleMute();
+      setVolume(1);
+    } else {
+      setVolume(newVolume);
+    }
+    for (let i of audioTags) {
+      i.volume = newVolume;
+    }
+  };
+
+  const handleMute = (event) => {
+    if (selectMute === "unmute") {
+      setSelectMute("mute");
+      setMuteIcon(<VolumeUpIcon />);
+      for (let i of audioTags) {
+        i.volume = 1;
+      }
+      setVolume(1);
+    } else {
+      setSelectMute("unmute");
+      setMuteIcon(<VolumeOffIcon />);
+      setVolume(0);
+    }
+  };
 
   function handleDeselect() {
     window.location.reload();
@@ -3594,12 +3593,21 @@ function Work(props) {
             onChange={handleVolume}
             aria-labelledby="continuous-slider"
           />
+          <div className="instruction">
+            <Typography>click a poster to select tech</Typography>
+          </div>
 
           <button className="control-button" id="deselectButton" onClick={handleDeselect}>
+            <RotateLeftIcon />
             <Typography>Reset Selection</Typography>
           </button>
         </div>
-        <h4 style={{ display: "flex", justifyContent: "center" }}>Select projects that contain:</h4>
+        <Typography style={{ display: "flex", justifyContent: "center" }} variant="h5">
+          or
+        </Typography>
+        <Typography style={{ display: "flex", justifyContent: "center" }} variant="h5">
+          Select projects that contain:
+        </Typography>
         <div className="tech-selection">
           {techButtons.map((tech) => (
             <div className="button-backdrop">
@@ -3621,14 +3629,17 @@ function Work(props) {
           ))}
         </div>
         <br></br>
-        <div className="selected-work" style={{ display: "flex", margin: "30px" }}>
-          {selectedWork.map((card) => (
-            <div className="project-card" style={{ padding: "10px" }} key={card.props.name}>
-              {card}
-            </div>
-          ))}
+        <div className="work-container">
+          <div className="selected-work">
+            {selectedWork.map((card) => (
+              <div className="project-card" style={{ padding: "10px" }} key={card.props.name}>
+                {card}
+              </div>
+            ))}
+          </div>
         </div>
-
+      </div>
+      <div>
         {audios.map((item) => (
           <audio
             className="audio-element"
@@ -3643,6 +3654,8 @@ function Work(props) {
           ></audio>
         ))}
       </div>
+      <div className="background1"></div>
+      <div className="background2"></div>
     </React.Fragment>
   );
 }

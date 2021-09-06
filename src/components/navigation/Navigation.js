@@ -40,7 +40,7 @@ function Navigation(props) {
   const handleSelectPage = () => {
     setSelectPage(window.location.pathname);
     let choices = Array.from(document.getElementsByClassName("menuItem"));
-    console.log(choices);
+    // console.log(choices);
     for (let i of choices) {
       if (i.id === selectPage) {
         i.className += " current";
@@ -146,7 +146,7 @@ function Navigation(props) {
                       <div
                         className="menuItem"
                         variant="contained"
-                        disableRipple
+                        disableripple="true"
                         onClick={() => handleMenuClick(pageURL)}
                         key={pageURL}
                         id={pageURL}
