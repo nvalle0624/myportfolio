@@ -23,7 +23,7 @@ import RotateLeftIcon from "@material-ui/icons/RotateLeft";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 
-import logoList from "./logolist";
+// import logoList from "./logolist";
 import { Typography } from "@material-ui/core";
 // console.log(logoList);
 
@@ -45,6 +45,22 @@ const audios = [
   { audio: synth3, name: "API's" },
   { audio: synth4, name: "RESTframework" },
 ];
+
+function slide(direction) {
+  const container = document.getElementById("selected-work");
+  let scrollCompleted = 0;
+  const slideVar = setInterval(function () {
+    if (direction === "left") {
+      container.scrollLeft -= 300;
+    } else {
+      container.scrollLeft += 300;
+    }
+    scrollCompleted += 300;
+    if (scrollCompleted >= 100) {
+      window.clearInterval(slideVar);
+    }
+  }, 50);
+}
 
 function Work(props) {
   const [selectedTech, setSelectedTech] = useState([]);
@@ -3613,18 +3629,7 @@ function Work(props) {
         <div className="tech-selection">
           {techButtons.map((tech) => (
             <div className="button-backdrop">
-              <button
-                className="tech-button"
-                key={tech}
-                value={tech}
-                onClick={handleSelectTech}
-                // style={{
-                //   backgroundImage: `url(${logoList[0].image})`,
-                //   backgroundRepeat: "no-repeat",
-                //   backgroundPosition: "center",
-                //   backgroundSize: "cover",
-                // }}
-              >
+              <button className="tech-button" key={tech} value={tech} onClick={handleSelectTech}>
                 {tech}
               </button>
             </div>
@@ -3632,17 +3637,17 @@ function Work(props) {
         </div>
         <br></br>
         <div className="work-container">
-          <div>
+          <div className="arrowDiv" onClick={() => slide("left")}>
             <ArrowBackIosIcon fontSize="large" className="left-arrow" />
           </div>
-          <div className="selected-work">
+          <div className="selected-work" id="selected-work">
             {selectedWork.map((card) => (
               <div className="project-card" style={{ padding: "10px" }} key={card.props.name}>
                 {card}
               </div>
             ))}
           </div>
-          <div>
+          <div className="arrowDiv" onClick={() => slide("right")}>
             <ArrowForwardIosIcon fontSize="large" className="right-arrow" />
           </div>
         </div>

@@ -3,11 +3,6 @@
 }
 
 body {
-  /* background-color: #318369;
-  background-image: linear-gradient(40deg, #318369 0%, #6534a2 100%);
-  z-index: -1;
-  animation: changeColor1 10s ease-in-out infinite;
-  -o-animation: changeColor1 10s ease-in-out infinite; */
   font-size: x-large;
 }
 
@@ -58,13 +53,7 @@ body {
   animation: changeColor2 4s ease-in-out infinite;
   -o-animation: changeColor2 4s ease-in-out infinite;
 }
-/* #background2 {
-  background-color: #4158d0;
-  background-image: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
-  z-index: -1;
-  animation: changeColor2 10s ease-in-out infinite;
-  -o-animation: changeColor2 10s ease-in-out infinite;
-} */
+
 @keyframes changeColor2 {
   0% {
     opacity: 0;
@@ -92,25 +81,6 @@ body {
   align-items: center;
   margin-top: 3%;
 }
-.name {
-}
-
-.role {
-}
-
-/* .navBar {
-  background-color: #0093e9;
-  background-image: linear-gradient(45deg, #0093e9 0%, #80d0c7 50%, #ffffff 100%);
-  box-shadow: 10px 10px #ffffff;
-} */
-
-/* @media screen and (max-width: 600px) {
-  .navBtnContainer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-} */
 
 .homepage {
   margin-top: 81px;
@@ -188,20 +158,12 @@ h3 {
   height: fit-content;
 }
 
-/* .intro {
-  display: flex;
-  background-color: white;
-  justify-content: center;
-  margin-left: 30%;
-  margin-right: 30%;
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 2%;
-} */
-
 .MuiPaper-root {
   background-color: rgba(255, 255, 255, 0.13) !important;
-  /* border: 1px solid black; */
+}
+
+#menu-appbar > div.MuiPaper-root.MuiMenu-paper.MuiPopover-paper.MuiPaper-elevation8.MuiPaper-rounded > ul {
+  background-color: white;
 }
 
 #cardtop {
@@ -244,6 +206,21 @@ h3 {
 #root > div > div.page-container > div.work-container > div > div > div {
   width: 500px;
 }
+
+.arrowDiv:hover {
+  transform: scale(1.5);
+}
+
+.left-arrow {
+  margin-left: 30%;
+}
+
+@media screen and (max-width: 375px) {
+  #root > div > div.page-container > div.work-container > div > div > div {
+    width: 240px;
+  }
+}
+
 .tech-selection {
   display: flex;
   justify-content: center;
@@ -266,12 +243,9 @@ h3 {
   /* from : https://cssgradient.io/gradient-backgrounds/  */
   background-color: #21d4fd;
   background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
-  /* box-shadow: 5px 5px #21d4fd; */
   border-radius: 5px;
   color: black;
   padding: 10px 27px;
-  /* width: 70px;
-  height: 50px; */
   text-align: center;
   text-decoration: none;
   display: flex;
@@ -456,19 +430,6 @@ h3 {
   }
 }
 
-/* html {
-  width: 100%;
-  height: 100%;
-  background-image: url(background.png);
-  background-position: 0px 0px;
-
-  animation: animatedBackground 10s linear infinite;
-  -moz-animation: animatedBackground 10s linear infinite;
-  -webkit-animation: animatedBackground 10s linear infinite;
-  -ms-animation: animatedBackground 10s linear infinite;
-  -o-animation: animatedBackground 10s linear infinite;
-} */
-
 .poster {
   border: 3px solid purple;
   height: 50px;
@@ -494,13 +455,11 @@ h3 {
   align-items: center;
 }
 
-.selected-work {
-  margin: 30px;
-
-  padding: 2%;
+#selected-work {
+  padding-top: 2%;
+  padding-bottom: 2%;
   border-radius: 5px;
   overflow-x: scroll;
-
   display: flex;
   flex-direction: row;
 }
@@ -535,10 +494,6 @@ h3 {
 }
 
 .about-container {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 5%; */
   position: relative;
   margin-top: 81px;
 }
@@ -551,8 +506,6 @@ h3 {
 
 .aboutme,
 .intro {
-  /* border: 1px solid black;
-  background-color: rgba(255, 255, 255, 0.781); */
   border-radius: 5px;
   padding: 2%;
   display: flex;
@@ -612,11 +565,6 @@ h3 {
   padding: 5px;
 }
 
-/* .page-container {
-  z-index: 1;
-  background-color: red;
-} */
-
 .control-button {
   border: none;
   background-color: rgba(0, 0, 0, 0);
@@ -641,9 +589,6 @@ h3 {
   height: fit-content;
   background-color: black;
   position: relative;
-
-  /* top: 0;
-  left: 0; */
 }
 
 .MuiSlider-rail {
@@ -679,10 +624,6 @@ h3 {
 #muteButton {
   margin-right: 10px;
   cursor: pointer;
-  /* float: left;
-  position: absolute;
-  top: 0;
-  left: 0; */
 }
 
 .instruction {
@@ -700,23 +641,6 @@ h3 {
     position: relative;
   }
 }
-
-/* .reset-container {
-  float: right;
-  width: fit-content;
-  height: fit-content;
-  z-index: 1;
-  position: fixed;
-  top: 0;
-  right: 0;
-} */
-
-/* #deselectButton {
-  float: right;
-  position: fixed;
-  top: 0;
-  right: 0;
-} */
 
 .poster#Python {
   background-color: red;
@@ -820,25 +744,7 @@ svg {
   background-color: "blue";
 }
 
-/* @media screen and (max-width: 928px) {
-  div.poster-selection {
-    display: none;
-  }
-} */
-
-/* svg #Selection {
-  fill: rgba(241, 131, 4, 0.596);
-} */
-
 #Selection:hover {
   fill: rgba(44, 121, 145, 0.411);
   cursor: pointer;
 }
-
-/* svg #Selection1 {
-  fill: red;
-}
-
-#Selection1:hover {
-  fill: white;
-} */

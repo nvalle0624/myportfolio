@@ -7,6 +7,7 @@ import AddIcon from "@material-ui/icons/Add";
 import RemoveIcon from "@material-ui/icons/Remove";
 
 function Resume() {
+  // from: https://stackoverflow.com/questions/62423397/zoomin-zoomout-buttons-doesnt-work-with-react-pdf
   const [scale, setScale] = useState(1);
   const MOBILE_WIDTH = 768;
 
@@ -31,6 +32,14 @@ function Resume() {
   return (
     <React.Fragment>
       <div className="resume">
+        <a
+          style={{ textDecoration: "none" }}
+          href="https://drive.google.com/file/d/1Nt8N0651eqzo9NMm-0ZlV51YBRbXIngJ/view?usp=sharing"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Button style={{ margin: "10px", backgroundColor: "black", color: "white" }}>Open in Google Drive</Button>
+        </a>
         <div className="zoom">
           <Button onClick={zoomIn} style={{ margin: "10px", backgroundColor: "black", color: "white" }}>
             <AddIcon />

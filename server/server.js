@@ -1,8 +1,9 @@
+require("dotenv").config();
 const express = require("express");
 const router = express.Router();
 const cors = require("cors");
 const nodemailer = require("nodemailer");
-
+// from : https://w3collective.com/react-contact-form/
 // run with node server/server.js in terminal, change google mail less secure third party access, add password, remove before deployment
 
 const app = express();
@@ -14,8 +15,8 @@ app.listen(5000, () => console.log("Server Running"));
 const contactEmail = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "nvalle0624@gmail.com",
-    pass: "",
+    user: process.env.EMAIL,
+    pass: process.env.PASS,
   },
 });
 

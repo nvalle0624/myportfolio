@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Button, InputLabel, TextField } from "@material-ui/core";
 
+// from: https://w3collective.com/react-contact-form/
+
 const ContactForm = () => {
-  const [status, setStatus] = useState("Send");
+  const [status, setStatus] = useState("Submit");
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("Sending...");
@@ -28,11 +30,26 @@ const ContactForm = () => {
       <div className="form-container">
         <form onSubmit={handleSubmit}>
           <div>
+            <InputLabel htmlFor="name" className="label">
+              Name:
+            </InputLabel>
+            <TextField
+              id="name"
+              className="email-input"
+              required
+              placeholder="Your name"
+              variant="outlined"
+              fullWidth
+            />
+          </div>
+          <br></br>
+          <div>
             <InputLabel htmlFor="email" className="label">
               Email:
             </InputLabel>
             <TextField
               required
+              id="email"
               className="email-input"
               variant="outlined"
               type="email"
@@ -46,6 +63,7 @@ const ContactForm = () => {
               Message:
             </InputLabel>
             <TextField
+              id="message"
               className="message-input"
               fullWidth
               multiline
