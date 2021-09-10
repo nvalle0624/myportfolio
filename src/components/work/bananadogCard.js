@@ -44,7 +44,7 @@ function BananaDogCard(props) {
   return (
     <Card className={classes.root} style={{ boxShadow: "1px 1px black" }}>
       <a
-        href="https://github.com/nvalle0624/kenzie-q4-capstone"
+        href="https://nvalle0624.pythonanywhere.com"
         target="_blank"
         rel="noreferrer"
         style={{ textDecoration: "none" }}
@@ -54,6 +54,9 @@ function BananaDogCard(props) {
       <CardMedia className={classes.media} image={bananadogIMG} title="BananaDog" label="image" />
 
       <CardContent style={{ height: "200px" }}>
+        <a href="https://github.com/nvalle0624/kenzie-q4-capstone" target="_blank" rel="noreferrer">
+          GitHub
+        </a>
         <div style={{ display: "flex", flexDirection: "wrap" }}>
           {props.tags.map((tag) => (
             <span className="tech-span" key={tag}>

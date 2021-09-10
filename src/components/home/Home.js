@@ -23,7 +23,7 @@ function Home(props) {
               I'm a developer looking to make an impact with your company, and push my skills to new levels.
             </Typography>
             <Typography variant="h4" className="intro-line">
-              I enjoy building and using intericate systems to do cool, creative and useful things, so I'm eager to take
+              I enjoy building and using intricate systems to do cool, creative and useful things, so I'm eager to take
               part in developing new products and tools.
             </Typography>
           </div>

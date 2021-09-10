@@ -14,7 +14,7 @@ function AboutMe(props) {
             Focus on web development, but interested in general software development and continued learning
           </Typography>
           <Typography variant="h5" paragraph className="aboutme-line">
-            Self-learner and team player, exhilerated by problem-solving and creative technical achievements
+            Self-learner and team player, exhilarated by problem-solving and creative technical achievements
           </Typography>
           <Typography variant="h5" paragraph className="aboutme-line">
             New York native with a background in music as a session musician and sound technician

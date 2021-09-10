@@ -39,8 +39,8 @@ body {
   width: 100%;
   height: 100%;
   z-index: -2;
-  animation: changeColor1 4s ease-in-out infinite;
-  -o-animation: changeColor1 4s ease-in-out infinite;
+  animation: changeColor1 6s ease-in-out infinite;
+  -o-animation: changeColor1 6s ease-in-out infinite;
 }
 .background2 {
   background-color: #4158d0;
@@ -50,8 +50,8 @@ body {
   width: 100%;
   height: 100%;
   z-index: -3;
-  animation: changeColor2 4s ease-in-out infinite;
-  -o-animation: changeColor2 4s ease-in-out infinite;
+  /* animation: changeColor2 4s ease-in-out infinite;
+  -o-animation: changeColor2 4s ease-in-out infinite; */
 }
 
 @keyframes changeColor2 {
