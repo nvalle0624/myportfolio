@@ -44,11 +44,14 @@ function PortfolioCard(props) {
   return (
     <Card className={classes.root} style={{ boxShadow: "1px 1px black" }}>
       <a href={"/"} target="_blank" rel="noreferrer" style={{ textDecoration: "none" }}>
-        <CardHeader title="This Site!" subheader="Aug 2021" id="cardtop" />
+        <CardHeader title="My Portfolio" subheader="Aug 2021" id="cardtop" />
       </a>
       <CardMedia className={classes.media} image={portfolioImage} title="Portfolio" label="image" />
 
       <CardContent style={{ height: "200px" }}>
+        <a href="https://github.com/nvalle0624/myportfolio" target="_blank" rel="noreferrer">
+          GitHub
+        </a>
         <div style={{ display: "flex", flexWrap: "wrap" }}>
           {props.tags.map((tag) => (
             <span className="tech-span" key={tag}>

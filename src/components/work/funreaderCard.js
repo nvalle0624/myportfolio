@@ -52,6 +52,9 @@ function FunReaderCard(props) {
       </a>
       <CardMedia className={classes.media} image={funreaderIMG} title="BananaDog" />
       <CardContent style={{ height: "200px" }}>
+        <a href="https://gitlab.com/nvalle0624/kapstoneq2" target="_blank" rel="noreferrer">
+          GitLab
+        </a>
         <div style={{ display: "flex", flexWrap: "wrap" }}>
           {props.tags.map((tag) => (
             <span className="tech-span" key={tag}>

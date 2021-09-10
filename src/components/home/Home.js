@@ -1,6 +1,6 @@
 import { Typography } from "@material-ui/core";
 import React from "react";
-import photo from "/Users/nick/MyPortfolio/portfolio_react_app/portfolio-app/src/components/work/static/nicholas_valle_headshot.jpg";
+import photo from "../work/static/nicholas_valle_headshot.jpg";
 
 function Home(props) {
   return (

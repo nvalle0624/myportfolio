@@ -1,6 +1,6 @@
 import { Typography } from "@material-ui/core";
 import React from "react";
-import nicksolo from "/Users/nick/MyPortfolio/portfolio_react_app/portfolio-app/src/components/work/static/nicksolo.jpg";
+import nicksolo from "../work/static/nicksolo.jpg";
 
 function AboutMe(props) {
   return (
@@ -8,7 +8,7 @@ function AboutMe(props) {
       <div className="about-container">
         <div className="aboutme">
           <Typography variant="h5" paragraph className="aboutme-line">
-            Graudate of Kenzie Academy's Front-End and Full-Stack Software Engineer certificate programs
+            Graduate of Kenzie Academy's Front-End and Full-Stack Software Engineer certificate programs
           </Typography>
           <Typography variant="h5" paragraph className="aboutme-line">
             Focus on web development, but interested in general software development and continued learning
