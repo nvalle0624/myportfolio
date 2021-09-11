@@ -21,10 +21,22 @@ app.use(function (req, res, next) {
 const contactEmail = nodemailer.createTransport({
   service: "gmail",
   auth: {
+    type: "OAuth2",
     user: process.env.EMAIL,
-    pass: process.env.PASS,
+    pass: process.env.WORD,
+    clientId: process.env.OAUTH_CLIENTID,
+    clientSecret: process.env.OAUTH_CLIENT_SECRET,
+    refreshToken: process.env.OAUTH_REFRESH_TOKEN,
   },
 });
+
+// const contactEmail = nodemailer.createTransport({
+//   service: "gmail",
+//   auth: {
+//     user: process.env.EMAIL,
+//     pass: process.env.PASS,
+//   },
+// });
 
 contactEmail.verify((error) => {
   if (error) {
