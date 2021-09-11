@@ -14,7 +14,7 @@ const ContactForm = () => {
       email: email.value,
       message: message.value,
     };
-    let response = await fetch("http://137.184.111.0:9000/", {
+    let response = await fetch("http://137.184.111.0:9000/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
