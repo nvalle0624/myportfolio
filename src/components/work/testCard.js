@@ -68,9 +68,7 @@ function TestCard(props) {
           style={{ marginTop: "20px" }}
           label="description"
         >
-          An application for a dog training business where trainers and clients can book sessions, communicate, and
-          access a persistent log of dogs’ info and daily reports. Allows trainers to automatically log times and notes
-          for trainings/activities per dog, per session.
+          Description...
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -88,27 +86,7 @@ function TestCard(props) {
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography label="contributions">
-            <li>Spearheaded development of custom CRM platform for dog trainer’s business in team of 3</li>
-            <li>
-              Planned project’s features, presented ideas through organized and detailed outlines, receiving glowing
-              feedback from team
-            </li>
-            <li>Created development roadmap and schedule, delegated tasks, providing clarity for team success</li>
-            <li>Led the design and programming of all front-end app functionality and back-end data relationships</li>
-            <li>
-              Developed features such as: social media style profiles, photo and video uploads, calendar, scheduling,
-              full profile and report editing, auto-report generation, and private messaging
-            </li>
-            <li>
-              Maintained correspondence with team members via detailed daily briefings, collaborated in shared virtual
-              workspaces, keeping team updated and on schedule
-            </li>
-            <li>Initiated preparations for checkpoints, created scripts and presentation structure </li>
-            <li>Completed capstone well within 2 week deadline</li>
-            <li>
-              Selected as a featured project for cohort after surpassing project requirements and course expectations
-              with exemplary app and presentation
-            </li>
+            <li>Details...</li>
           </Typography>
         </CardContent>
       </Collapse>

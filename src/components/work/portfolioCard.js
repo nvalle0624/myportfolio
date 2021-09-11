@@ -86,7 +86,7 @@ function PortfolioCard(props) {
           <Typography label="contributions">
             <li>Sole designer and engineer</li>
             <li>Implemented filtering and reposnive UI</li>
-            <li>Audio interation with DOM</li>
+            <li>Audio interaction with DOM</li>
           </Typography>
         </CardContent>
       </Collapse>

@@ -48,7 +48,7 @@ function Resume() {
             <RemoveIcon />
           </Button>
         </div>
-        <Document file={resumePDF} className="resume-container">
+        <Document file="./nicholas_valle_resume.pdf" className="resume-container">
           <div style={{ border: "1px solid black" }}>
             <Page pageNumber={1} scale={scale} />
           </div>
