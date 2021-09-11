@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use("/", router);
-app.listen(8080, () => console.log("Server Running"));
+app.listen(5000, () => console.log("Server Running"));
 
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -61,7 +61,6 @@ router.post("/contact", (req, res) => {
   contactEmail.sendMail(mail, (error) => {
     if (error) {
       res.json({ status: "ERROR" });
-      console.error();
     } else {
       res.json({ status: "Message Sent" });
     }
