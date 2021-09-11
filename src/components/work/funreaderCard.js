@@ -83,26 +83,17 @@ function FunReaderCard(props) {
       <Collapse className="collapse" in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography>
-            <li>Spearheaded development of custom CRM platform for dog trainer’s business in team of 3</li>
+            <li>Reworked product owner’s initial concept for team to better execute within deadline</li>
             <li>
-              Planned project’s features, presented ideas through organized and detailed outlines, receiving glowing
-              feedback from team
-            </li>
-            <li>Created development roadmap and schedule, delegated tasks, providing clarity for team success</li>
-            <li>Led the design and programming of all front-end app functionality and back-end data relationships</li>
-            <li>
-              Developed features such as: social media style profiles, photo and video uploads, calendar, scheduling,
-              full profile and report editing, auto-report generation, and private messaging
+              Led the design and programming of nearly all front-end app functionality and back-end data relationships
             </li>
             <li>
-              Maintained correspondence with team members via detailed daily briefings, collaborated in shared virtual
-              workspaces, keeping team updated and on schedule
+              Successfully leveraged multiple public API’s simultaneously for accurate text and audio data for real-time
+              interaction
             </li>
-            <li>Initiated preparations for checkpoints, created scripts and presentation structure </li>
-            <li>Completed capstone well within 2 week deadline</li>
             <li>
-              Selected as a featured project for cohort after surpassing project requirements and course expectations
-              with exemplary app and presentation
+              Designed game logic and functionality to work with user profiles and API requests, completing project goal
+              within deadline
             </li>
           </Typography>
         </CardContent>
