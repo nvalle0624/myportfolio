@@ -5,6 +5,8 @@ import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import resumePDF from "./nicholas_valle_resume.pdf";
 import AddIcon from "@material-ui/icons/Add";
 import RemoveIcon from "@material-ui/icons/Remove";
+import { pdfjs } from "react-pdf";
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 function Resume() {
   // from: https://stackoverflow.com/questions/62423397/zoomin-zoomout-buttons-doesnt-work-with-react-pdf
