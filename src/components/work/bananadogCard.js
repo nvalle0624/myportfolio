@@ -71,6 +71,12 @@ function BananaDogCard(props) {
           style={{ marginTop: "20px" }}
           label="description"
         >
+          <p>
+            Demo as Trainer:<br></br>username: demotrainer pw: Demo123bananadog
+          </p>
+          <p>
+            Demo as Client:<br></br>username: democlient pw: Demo123bananadog
+          </p>
           An application for a dog training business where trainers and clients can book sessions, communicate, and
           access a persistent log of dogs’ info and daily reports. Allows trainers to automatically log times and notes
           for trainings/activities per dog, per session.
