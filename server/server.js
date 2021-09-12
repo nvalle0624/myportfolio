@@ -10,7 +10,6 @@ const app = express();
 app.use(cors());
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "https://nicholasvallefsse.com/contact");
-  res.header("Access-Control-Allow-Origin", "http://137.184.111.0:5000");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   res.header("Access-Control-Allow-Methods", "GET, POST");
   res.header("Access-Control-Allow-Credentials", true);
@@ -48,7 +47,7 @@ contactEmail.verify((error) => {
   }
 });
 
-router.post("/contact", (req, res) => {
+router.post("/sendmessage", (req, res) => {
   const name = req.body.name;
   const email = req.body.email;
   const message = req.body.message;
