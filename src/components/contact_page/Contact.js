@@ -14,7 +14,7 @@ const ContactForm = () => {
       email: email.value,
       message: message.value,
     };
-    let response = await fetch("https://nicholasvallefsse.com/contact", {
+    let response = await fetch("https://nicholasvallefsse.com/sendmessage", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",

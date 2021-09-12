@@ -17,7 +17,7 @@ app.use(function (req, res, next) {
 });
 app.use(express.json());
 app.use("/", router);
-app.listen(5000, () => console.log("Server Running"));
+app.listen(8080, () => console.log("Server Running"));
 
 const contactEmail = nodemailer.createTransport({
   service: "gmail",
