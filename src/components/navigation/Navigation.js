@@ -95,7 +95,7 @@ function Navigation(props) {
   return (
     <React.Fragment>
       <div className={classes.root}>
-        <AppBar position="static">
+        <AppBar>
           <Toolbar style={{ display: "flex", justifyContent: "center" }}>
             <Typography variant="h6" className={classes.title}>
               {}
