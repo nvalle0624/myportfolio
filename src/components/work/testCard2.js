@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function TestCard(props) {
+function TestCard2(props) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -89,4 +89,4 @@ function TestCard(props) {
   );
 }
 
-export default TestCard;
+export default TestCard2;
