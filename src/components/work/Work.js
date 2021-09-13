@@ -242,7 +242,7 @@ function Work(props) {
 
   return (
     <React.Fragment>
-      <div className="page-container">
+      <div className="page-container" id="project-page-container">
         <div className="poster-selection">
           <div className="poster-container">
             <svg

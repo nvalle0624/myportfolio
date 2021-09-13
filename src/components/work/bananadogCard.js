@@ -12,6 +12,7 @@ import Typography from "@material-ui/core/Typography";
 
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import bananadogIMG from "./static/bananadog.jpg";
+
 // per material ui docs
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,12 +34,45 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+// function slidePage(direction) {
+//   const container = document.documentElement;
+//   let scrollCompleted = 0;
+//   const slideVar = setInterval(function () {
+//     if (direction === "down") {
+//       container.scrollTop -= 300;
+//     } else {
+//       container.scrollTop -= 300;
+//     }
+//     scrollCompleted += 300;
+//     if (scrollCompleted >= 100) {
+//       window.clearInterval(slideVar);
+//     }
+//   }, 50);
+// }
+
+function slidePage() {
+  const slideVar = setInterval(() => {
+    window.scrollBy({
+      top: 1000,
+      left: 0,
+      behavior: "smooth",
+    });
+    window.clearInterval(slideVar);
+  }, 350);
+}
+
 function BananaDogCard(props) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
+    slidePage();
+    // if (expanded) {
+    //   slidePage("down");
+    // } else {
+    //   slidePage("up");
+    // }
   };
 
   return (
@@ -82,6 +116,7 @@ function BananaDogCard(props) {
           for trainings/activities per dog, per session.
         </Typography>
       </CardContent>
+
       <CardActions disableSpacing>
         <IconButton
           className={clsx(classes.expand, {
@@ -94,8 +129,9 @@ function BananaDogCard(props) {
           <ExpandMoreIcon />
         </IconButton>
       </CardActions>
+
       <Collapse in={expanded} orientation="horizontal" timeout="auto" unmountOnExit>
-        <CardContent>
+        <CardContent id="contributions">
           <Typography label="contributions">
             <li>Spearheaded development of custom CRM platform for dog trainer’s business in team of 3</li>
             <li>
