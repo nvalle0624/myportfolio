@@ -68,11 +68,6 @@ function BananaDogCard(props) {
   const handleExpandClick = () => {
     setExpanded(!expanded);
     slidePage();
-    // if (expanded) {
-    //   slidePage("down");
-    // } else {
-    //   slidePage("up");
-    // }
   };
 
   return (

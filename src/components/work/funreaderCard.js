@@ -32,12 +32,24 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+function slidePage() {
+  const slideVar = setInterval(() => {
+    window.scrollBy({
+      top: 1000,
+      left: 0,
+      behavior: "smooth",
+    });
+    window.clearInterval(slideVar);
+  }, 350);
+}
+
 function FunReaderCard(props) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
+    slidePage();
   };
 
   return (
