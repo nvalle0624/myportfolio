@@ -78,7 +78,9 @@ function PortfolioCard(props) {
           style={{ marginTop: "20px" }}
           label="description"
         >
-          This very web application, showcasing React, and responsive design.
+          A React web app portfolio. Uses Nodemailer in a small Express backend to send mail, Howler.js to play and
+          control audio, and React-pdf to present resume. Select posters in the banner image or select correspnding
+          buttons to filter through projects based on tech tags.
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -95,11 +97,7 @@ function PortfolioCard(props) {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography label="contributions">
-            <li>Sole designer and engineer</li>
-            <li>Implemented filtering and reposnive UI</li>
-            <li>Audio interaction with DOM</li>
-          </Typography>
+          <Typography label="contributions"></Typography>
         </CardContent>
       </Collapse>
     </Card>
