@@ -87,7 +87,7 @@ function Navigation(props) {
       pageURL: "/contact",
     },
     {
-      title: "Resumé",
+      title: "Resume",
       pageURL: "/resume",
     },
   ];
