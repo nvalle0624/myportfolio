@@ -1,50 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { workCards } from "./WorkCards";
-import drums from "./static/audio/Bluebird.mp3";
-import synth1 from "./static/audio/70s Choral Riff Layers.mp3";
-import synth2 from "./static/audio/80s Pop Synthesizer 01.mp3";
-import guitar from "./static/audio/Longing Guitar.mp3";
-import guitar2 from "./static/audio/Echo Loop Guitar.mp3";
-import piano from "./static/audio/Cali Vibes Piano.mp3";
-import sax from "./static/audio/Night Walk Sax.mp3";
-import guitar3 from "./static/audio/Rolling Disco Guitar.mp3";
-import maracas from "./static/audio/Big Maracas 05.mp3";
-import tambourine from "./static/audio/Tambourine 01.mp3";
-import fireplace from "./static/audio/Fireplace All.mp3";
-import brookyln from "./static/audio/Brooklyn Style Vibes 02.mp3";
-import bass1 from "./static/audio/Edgy Rock Bass 07.mp3";
-import bass2 from "./static/audio/Drop the Funk Bass 01.mp3";
-import synth3 from "./static/audio/Aquamarine Synth.mp3";
-import synth4 from "./static/audio/80s Classic Lead Synth.mp3";
+
 import VolumeOffIcon from "@material-ui/icons/VolumeOff";
 import VolumeUpIcon from "@material-ui/icons/VolumeUp";
 import Slider from "@material-ui/core/Slider";
 import RotateLeftIcon from "@material-ui/icons/RotateLeft";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
-
+import { Howler } from "howler";
+import { allSounds } from "./audioHowlers";
 // import logoList from "./logolist";
 import { Typography } from "@material-ui/core";
 // console.log(logoList);
-
-const audios = [
-  { audio: drums, name: "Python" },
-  { audio: synth1, name: "JavaScript" },
-  { audio: synth2, name: "Django" },
-  { audio: guitar, name: "React" },
-  { audio: guitar2, name: "Redux" },
-  { audio: piano, name: "Node.js" },
-  { audio: sax, name: "Express.js" },
-  { audio: guitar3, name: "SQL" },
-  { audio: maracas, name: "NoSql" },
-  { audio: tambourine, name: "Postgresql" },
-  { audio: fireplace, name: "MongoDB" },
-  { audio: brookyln, name: "Bootstrap" },
-  { audio: bass1, name: "CSS" },
-  { audio: bass2, name: "HTML" },
-  { audio: synth3, name: "API's" },
-  { audio: synth4, name: "RESTframework" },
-];
 
 function slide(direction) {
   const container = document.getElementById("selected-work");
@@ -69,67 +36,58 @@ function Work(props) {
   const [muteIcon, setMuteIcon] = useState(<VolumeOffIcon />);
   const [volume, setVolume] = useState(0);
   let newSelectedWork = [];
-  let audioHTML = "";
 
-  const audioTags = Array.from(document.getElementsByClassName("audio-element"));
-  const handleReplay = () => {
-    for (let i of audioTags) {
-      // i.currentTime = 0;
-      // i.play();
-      i.load();
-      i.volume = volume;
-      i.play();
-    }
-  };
-
-  useEffect(() => {
-    const handlePlay = () => {
-      for (let i of audioTags) {
-        // i.load();
-        i.volume = volume;
-        i.play();
-      }
-    };
-    handlePlay();
-    const interval = setInterval(() => {
-      handlePlay();
-    }, 39000);
-    return () => clearInterval(interval);
-  }, [audioTags, selectMute, volume]);
-
-  for (let a of selectedTech) {
-    audioHTML = document.getElementById("audio-" + a);
-    if (selectMute === "mute") {
-      audioHTML.muted = false;
-    } else {
-      audioHTML.muted = true;
-    }
+  if (selectMute === "unmute") {
+    Howler.mute(true);
   }
 
+  useEffect(() => {
+    allSounds.forEach((i) => {
+      i.mute(true);
+    });
+    const interval = setInterval(() => {
+      allSounds.forEach((i) => {
+        i.pause();
+        i.seek(0);
+        i.play();
+      });
+    }, 19200);
+    return () => {
+      clearInterval(interval);
+      Howler.mute(true);
+    };
+  }, []);
+
   const handleVolume = (event, newVolume) => {
+    setSelectedTech(selectedTech);
     if (selectMute === "unmute") {
       handleMute();
       setVolume(1);
     } else {
       setVolume(newVolume);
-    }
-    for (let i of audioTags) {
-      i.volume = newVolume;
+      Howler.volume(newVolume);
     }
   };
 
   const handleMute = (event) => {
+    allSounds.forEach((i) => {
+      i.pause();
+      i.seek(0);
+      i.play();
+    });
     if (selectMute === "unmute") {
       setSelectMute("mute");
       setMuteIcon(<VolumeUpIcon />);
-      for (let i of audioTags) {
+      Howler.mute(false);
+      for (let i of allSounds) {
+        // console.log(i);
         i.volume = 1;
       }
       setVolume(1);
     } else {
       setSelectMute("unmute");
       setMuteIcon(<VolumeOffIcon />);
-      setVolume(0);
+      Howler.mute(true);
     }
   };
 
@@ -141,24 +99,31 @@ function Work(props) {
     let tech = event.currentTarget.innerHTML;
     setSelectedTech(selectedTech);
     setSelectedWork(selectedWork);
-    // handleReplay();
 
-    const isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
-    if (isChrome) {
-      handleReplay();
-    }
-
-    for (let a of selectedTech) {
-      audioHTML = document.getElementById("audio-" + a);
-      audioHTML.muted = true;
+    for (let i of allSounds) {
+      if (selectedTech.includes(i.name)) {
+        i.mute(false);
+      } else {
+        i.mute(true);
+      }
     }
 
     if (!selectedTech.includes(tech)) {
       selectedTech.push(tech);
       setSelectedTech(selectedTech);
+      allSounds
+        .filter(function (i) {
+          return i.name === tech;
+        })[0]
+        .mute(false);
     } else {
       selectedTech.splice(selectedTech.indexOf(tech), 1);
       setSelectedTech(selectedTech);
+      allSounds
+        .filter(function (i) {
+          return i.name === tech;
+        })[0]
+        .mute(true);
     }
 
     if (selectedTech.length > 0) {
@@ -235,10 +200,6 @@ function Work(props) {
     "API's",
     "RESTframework",
   ];
-
-  // const handleTest = (event) => {
-  //   console.log("test passed!");
-  // };
 
   return (
     <React.Fragment>
@@ -3651,21 +3612,6 @@ function Work(props) {
             <ArrowForwardIosIcon fontSize="large" className="right-arrow" />
           </div>
         </div>
-      </div>
-      <div>
-        {audios.map((item) => (
-          <audio
-            className="audio-element"
-            autoPlay={true}
-            preload="auto"
-            // loop
-            src={item.audio}
-            id={"audio-" + item.name}
-            muted
-            key={item.name}
-            // controls
-          ></audio>
-        ))}
       </div>
 
       <div className="background1"></div>
