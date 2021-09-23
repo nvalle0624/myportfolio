@@ -60,7 +60,7 @@ function FunReaderCard(props) {
         rel="noreferrer"
         style={{ textDecoration: "none" }}
       >
-        <CardHeader title="Fun Reader" subheader="January 2021" id="cardtop" />
+        <CardHeader title="Fun Reader - see the code" subheader="January 2021" id="cardtop" />
       </a>
       <CardMedia className={classes.media} image={funreaderIMG} title="BananaDog" />
       <CardContent style={{ height: "200px" }}>

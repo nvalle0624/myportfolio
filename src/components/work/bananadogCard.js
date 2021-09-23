@@ -78,7 +78,7 @@ function BananaDogCard(props) {
         rel="noreferrer"
         style={{ textDecoration: "none" }}
       >
-        <CardHeader title="BananaDog" subheader="July 2021" id="cardtop" />
+        <CardHeader title="BananaDog - visit the site" subheader="July 2021" id="cardtop" />
       </a>
       <CardMedia className={classes.media} image={bananadogIMG} title="BananaDog" label="image" />
 

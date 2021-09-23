@@ -56,7 +56,7 @@ function PortfolioCard(props) {
   return (
     <Card className={classes.root} style={{ boxShadow: "1px 1px black" }}>
       <a href={"/"} target="_blank" rel="noreferrer" style={{ textDecoration: "none" }}>
-        <CardHeader title="My Portfolio" subheader="Aug 2021" id="cardtop" />
+        <CardHeader title="My Portfolio - you're here!" subheader="Aug 2021" id="cardtop" />
       </a>
       <CardMedia className={classes.media} image={portfolioImage} title="Portfolio" label="image" />
 

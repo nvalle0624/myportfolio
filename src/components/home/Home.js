@@ -7,7 +7,7 @@ function Home(props) {
     <React.Fragment>
       <div className="homepage">
         <div className="headshot-container">
-          <img alt="me" src={photo} style={{ width: "30%" }} className="headshot"></img>
+          <img alt="me" src={photo} className="headshot"></img>
         </div>
         <div className="intro-container">
           <div className="intro-head">

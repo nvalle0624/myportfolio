@@ -55,7 +55,7 @@ function Spacetagram(props) {
   return (
     <Card className={classes.root} style={{ boxShadow: "1px 1px black" }}>
       <a href={"https://spacetagram.xyz/"} target="_blank" rel="noreferrer" style={{ textDecoration: "none" }}>
-        <CardHeader title="Spacetagram" subheader="Sept 2021" id="cardtop" />
+        <CardHeader title="Spacetagram - visit the site" subheader="Sept 2021" id="cardtop" />
       </a>
       <CardMedia className={classes.media} image={spacetagramIMG} title="Spacetagram" label="image" />
 
