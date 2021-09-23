@@ -98,7 +98,8 @@ function Spacetagram(props) {
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography label="contributions">
-            <li>Solo project, built and deployed within less than 4 afternoons</li>
+            <li>Solo project, built and deployed within less than 4 days</li>
+            <li>Minimal design, focusing on funcitonality</li>
             <li>
               Added extra features not listed in front-end tech challenge, such as persistent storage for likes and
               unlikes and scrolling

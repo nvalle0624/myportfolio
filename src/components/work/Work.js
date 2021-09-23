@@ -3581,12 +3581,14 @@ function Work(props) {
             <Typography>Reset Selection</Typography>
           </button>
         </div>
-        <Typography style={{ display: "flex", justifyContent: "center" }} variant="h5">
-          or
-        </Typography>
-        <Typography style={{ display: "flex", justifyContent: "center" }} variant="h5">
-          Select projects that contain:
-        </Typography>
+        <div className="selectProjectsText">
+          <Typography style={{ display: "flex", justifyContent: "center" }} variant="h5">
+            or
+          </Typography>
+          <Typography style={{ display: "flex", justifyContent: "center" }} variant="h5">
+            Select projects that contain:
+          </Typography>
+        </div>
         <div className="tech-selection">
           {techButtons.map((tech) => (
             <div className="button-backdrop">

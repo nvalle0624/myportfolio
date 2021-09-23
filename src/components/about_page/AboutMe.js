@@ -20,7 +20,7 @@ function AboutMe(props) {
             New York native with a background in music as a session musician and sound technician
           </Typography>
           <Typography variant="h5" paragraph className="aboutme-line">
-            Aiming to merge passions professionally with future projects
+            Hope to merge passions professionally with future projects
           </Typography>
         </div>
         <div className="about-img-container-1">

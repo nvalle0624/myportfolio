@@ -68,7 +68,8 @@ body {
 }
 
 .headshot-container {
-  background-color: black;
+  margin-top: 70px;
+  /* background-color: black; */
   display: flex;
   justify-content: center;
   position: relative;
@@ -236,6 +237,11 @@ h3 {
   border-radius: 5px;
   margin: 10px;
   width: 200px;
+}
+
+.selectProjectsText {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .tech-button {
