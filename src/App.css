@@ -175,12 +175,12 @@ h3 {
 
 #cardtop {
   background-color: rgba(0, 0, 0, 0);
-  color: white;
+  color: black;
 }
 .MuiCardContent-root {
   background-color: rgba(0, 0, 0, 0);
 
-  color: white;
+  color: black;
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -195,7 +195,11 @@ h3 {
 #cardtop
   > div
   > span.MuiTypography-root.MuiCardHeader-subheader.MuiTypography-body1.MuiTypography-colorTextSecondary.MuiTypography-displayBlock {
-  color: white;
+  color: black;
+}
+
+#cardtop > div > span.MuiTypography-root.MuiCardHeader-title.MuiTypography-h5.MuiTypography-displayBlock {
+  font-weight: 700;
 }
 
 #root > div > div.page-container > div.work-container > div > div > div {
@@ -253,8 +257,8 @@ h3 {
   border: none;
   cursor: pointer;
   /* from : https://cssgradient.io/gradient-backgrounds/  */
-  background-color: #21d4fd;
-  background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
+  background-color: #6b4cf5;
+  /* background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%); */
   border-radius: 5px;
   color: black;
   padding: 10px 27px;
@@ -448,8 +452,8 @@ h3 {
 }
 
 .selected {
-  background-color: #ffe53b;
-  background-image: linear-gradient(147deg, #ffe53b 0%, #ff2525 74%);
+  background-color: #68debf;
+  /* background-image: linear-gradient(147deg, #ffe53b 0%, #ff2525 74%); */
   fill: rgba(69, 123, 240, 0.295) !important;
 }
 
