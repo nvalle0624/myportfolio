@@ -576,9 +576,11 @@ h3 {
 }
 
 .tech-span {
-  border: 1px solid black;
-  border-radius: 7px;
-  padding: 5px;
+  /* border: 1px solid black; */
+  border-radius: 3px;
+  margin: auto;
+  padding: 7px;
+  font-size: medium;
 }
 
 .control-button {
